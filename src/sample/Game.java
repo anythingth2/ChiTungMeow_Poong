@@ -43,6 +43,7 @@ public class Game extends Application implements Sound {
 
         Pane pane = new Pane();
         pane.getChildren().add(player1.getCharacterCore());
+
         Scene scene = new Scene(pane, 800, 600);
         primaryStage.setTitle("ChiTungMeowPoong");
         primaryStage.setScene(scene);
