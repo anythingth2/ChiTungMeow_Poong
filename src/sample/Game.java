@@ -19,7 +19,7 @@ public class Game extends Application implements Sound {
     public void start(Stage primaryStage) throws Exception {
 
 
-        PlayerObj player1 = new PlayerObj("ChiChaChai", ImgSprite.dog) {
+        PlayerObj player1 = new PlayerObj("ChiChaChai", ImgSprite.cat[0]) {
             @Override
             public KeyCode getMoveUPkey() {
                 return KeyCode.W;

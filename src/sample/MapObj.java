@@ -12,12 +12,17 @@ public class MapObj extends ObjSprite {
 
 
     public MapObj(String imgSprite) {
-        itemCore=new ImageView(imgSprite);
+        itemCore = new ImageView(imgSprite);
 
     }
 
-    public void destroy() {
+    public ImageView getItemCore() {
+        return itemCore;
+    }
 
+
+
+    public void destroy() {
 
     }
 

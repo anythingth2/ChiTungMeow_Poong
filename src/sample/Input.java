@@ -1,9 +1,7 @@
 package sample;
 
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 /**
  * Created by ChiChaChai on 30/3/2560.
@@ -30,7 +28,6 @@ public class Input {
     }
 
     public boolean isMoveUp() {
-
         return keyPressing == playerObj.getMoveUPkey();
     }
 
