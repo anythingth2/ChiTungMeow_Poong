@@ -9,8 +9,6 @@ abstract public class ObjSprite {
 
     private double x;
     private double y;
-
-
     private double widthSprite;
     private double heightSprite;
 
@@ -22,21 +20,20 @@ abstract public class ObjSprite {
         isMovable = checkMovable();
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
 
     public double getX() {
         return x;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
     public double getY() {
         return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
     }
 
     public double getWidthSprite() {

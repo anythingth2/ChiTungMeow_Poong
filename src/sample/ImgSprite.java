@@ -5,4 +5,5 @@ package sample;
  */
 public interface ImgSprite {
     String[] cat={"CatUp_09.png","CatUp_10.png","CatUp_11.png","CatUp_12.png"};
+    String rock = "sprite\\Obj\\Rock\\IceRock.png";
 }

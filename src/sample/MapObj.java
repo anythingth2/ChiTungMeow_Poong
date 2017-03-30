@@ -20,6 +20,11 @@ public class MapObj extends ObjSprite {
         return itemCore;
     }
 
+    public void relocate(double x, double y) {
+        setX(x);
+        setY(y);
+        itemCore.relocate(x,y);
+    }
 
 
     public void destroy() {

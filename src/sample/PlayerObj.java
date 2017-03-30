@@ -9,11 +9,10 @@ import javafx.scene.input.KeyCode;
 abstract public class PlayerObj extends ObjSprite implements Direction {
 
 
-    private String name;
     private ImageView characterCore;
 
 
-    private double running_velo=3;
+    private double running_velo=10;
     private int amountBomb;
     private double distanceBomb;
     private int hp;
@@ -25,9 +24,14 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
     private KeyCode moveLEFTkey;
 
 
-    public PlayerObj(String name, String character) {
-        this.name = name;
+    public PlayerObj(String character) {
+
         characterCore = new ImageView(character);
+        characterCore.setFitWidth(100);
+        characterCore.setFitHeight(100);
+        setX(250);
+        setY(250);
+        update();
         moveUPkey = getMoveUPkey();
         moveRIGHTkey = getMoveRIGHTkey();
         moveDownkey = getMoveDownkey();
@@ -59,9 +63,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         return canKickBomb;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
     public void setCharacterCore(ImageView characterCore) {
         this.characterCore = characterCore;
@@ -111,9 +113,6 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         this.moveLEFTkey = moveLEFTkey;
     }
 
-    public String getName() {
-        return name;
-    }
 
 
     public void move(int direction) {
