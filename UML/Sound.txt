@@ -1,3 +1,0 @@
-+Sound
-    +soundEff : javafx.scene.media.AudioClip[] {static} {ReadOnly}
-    
