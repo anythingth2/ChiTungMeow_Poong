@@ -3,6 +3,9 @@ package sample;
 /**
  * Created by ChiChaChai on 30/3/2560.
  */
+
+import java.io.*;
+import java.util.ArrayList;
 public class SaveMap {
 
 
@@ -64,10 +67,38 @@ public class SaveMap {
     }
 
     public void save() {
+        try{
+
+            FileOutputStream saveFile=new FileOutputStream("SaveObj.sav");
+
+            ObjectOutputStream save = new ObjectOutputStream(saveFile);
+            //save.writeObject(ตัวแปร);
+            //save.writeObject(ตัวแปร);
+            //save.writeObject(ตัวแปร);
+            //save.writeObject(ตัวแปร);
+            //save.writeObject(ตัวแปร);
+            save.close();
+        }
+        catch(Exception exc){
+            exc.printStackTrace();
+        }
 
     }
 
     public void readMap() {
+        try{
+            FileInputStream saveFile = new FileInputStream("SaveObj.sav");
+            ObjectInputStream save = new ObjectInputStream(saveFile);
 
+            //ตัวแปร = (Boolean) save.readObject();
+            //ตัวแปร = (Integer) save.readObject();
+            //ตัวแปร = (String) save.readObject();
+            //ตัวแปร = (ArrayList) save.readObject();
+
+            save.close();
+        }
+        catch(Exception exc){
+            exc.printStackTrace();
+        }
     }
 }
