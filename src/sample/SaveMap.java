@@ -3,12 +3,11 @@ package sample;
 /**
  * Created by ChiChaChai on 30/3/2560.
  */
-<<<<<<< HEAD
-=======
+
 
 import java.io.*;
 import java.util.ArrayList;
->>>>>>> cc10949c1e5e633d323773f23b0eaa1d4d8d4db7
+
 public class SaveMap {
 
     private int widthBlock;
@@ -45,8 +44,7 @@ public class SaveMap {
     }
 
     public void save() {
-<<<<<<< HEAD
-=======
+
         try{
 
             FileOutputStream saveFile=new FileOutputStream("SaveObj.sav");
@@ -62,14 +60,12 @@ public class SaveMap {
         catch(Exception exc){
             exc.printStackTrace();
         }
->>>>>>> cc10949c1e5e633d323773f23b0eaa1d4d8d4db7
+
 
     }
 
     public void readMap() {
-<<<<<<< HEAD
 
-=======
         try{
             FileInputStream saveFile = new FileInputStream("SaveObj.sav");
             ObjectInputStream save = new ObjectInputStream(saveFile);
@@ -84,6 +80,6 @@ public class SaveMap {
         catch(Exception exc){
             exc.printStackTrace();
         }
->>>>>>> cc10949c1e5e633d323773f23b0eaa1d4d8d4db7
+
     }
 }
