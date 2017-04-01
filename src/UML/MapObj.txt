@@ -1,0 +1,9 @@
++MapObj extends Object
+    -itemImg : File[]
+    -bombImg : File[]
+    -itemCore : javafx.scene.image.ImageView
+
+    +ListMapObjUrl : String[] {static} {ReadOnly}
+    ---------------------------------------
+    +MapObj( nameFile : String)
+    +destory() : void

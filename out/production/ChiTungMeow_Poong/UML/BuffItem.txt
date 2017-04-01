@@ -1,0 +1,8 @@
++Buff
+    +increaseVelo( playerObj : PlayerObj) : void
+    +increaseDistanceBomb( playerObj : PlayerObj) : void
+    +increaseAmountBomb( playerObj : PlayerObj) : void
+    +kickBomb( playerObj : PlayerObj) : void
+    +addBarrier( playerObj : PlayerObj) : void
+    --------------------------------------------
+    +Buff()
