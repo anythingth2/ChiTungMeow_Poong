@@ -1,3 +1,0 @@
-+Collision
-    +isOverlapWithMap( playerObj : PlayerObj ) : boolean {static}
-    -------------------------
