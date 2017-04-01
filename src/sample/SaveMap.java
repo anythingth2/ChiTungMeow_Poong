@@ -6,6 +6,7 @@ package sample;
 
 import java.io.*;
 import java.util.ArrayList;
+
 public class SaveMap {
 
 
@@ -27,7 +28,9 @@ public class SaveMap {
         widthEachSprite = widthResolution / widthBlock;
         heightEachSprite = heightResolution / heightBlock;
         mapObj = new MapObj[heightBlock][widthBlock];
-        init();
+        //init();
+        //save();
+        readMap();
 
     }
 
@@ -54,7 +57,7 @@ public class SaveMap {
                 mapObj[i][j].getItemCore().setFitWidth(widthEachSprite);
                 mapObj[i][j].getItemCore().setFitHeight(heightEachSprite);
                 //mapObj[i][j].getItemCore().relocate(widthEachSprite * j, heightEachSprite * i);
-                mapObj[i][j].relocate(150,150);
+                mapObj[i][j].relocate(150, 150);
             }
     }
 
@@ -67,37 +70,26 @@ public class SaveMap {
     }
 
     public void save() {
-        try{
+        try {
 
-            FileOutputStream saveFile=new FileOutputStream("SaveObj.sav");
-
+            FileOutputStream saveFile = new FileOutputStream("SaveObj.sav");
             ObjectOutputStream save = new ObjectOutputStream(saveFile);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
+            save.writeObject(mapObj);
             save.close();
-        }
-        catch(Exception exc){
+        } catch (Exception exc) {
             exc.printStackTrace();
         }
 
     }
 
     public void readMap() {
-        try{
+        try {
             FileInputStream saveFile = new FileInputStream("SaveObj.sav");
             ObjectInputStream save = new ObjectInputStream(saveFile);
-
-            //ตัวแปร = (Boolean) save.readObject();
-            //ตัวแปร = (Integer) save.readObject();
-            //ตัวแปร = (String) save.readObject();
-            //ตัวแปร = (ArrayList) save.readObject();
-
+            mapObj = (MapObj[][]) save.readObject();
             save.close();
-        }
-        catch(Exception exc){
+        } catch (Exception exc) {
+            System.out.println("ERROR");
             exc.printStackTrace();
         }
     }
