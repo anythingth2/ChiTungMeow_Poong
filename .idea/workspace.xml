@@ -2,130 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648ff8d3-34da-44bd-9cde-de5b5af1409c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/PlayerObj.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Down/DogDown_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Down/DogDown_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Left/DogLeft_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Left/DogLeft_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Up/DogUp_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Poring/Up/PoringDown_08.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/ImgSprite.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/ImgSprite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Input.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Input.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_01.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_01.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_02.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_03.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_03.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_04.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_04.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_05.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_05.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_06.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_06.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_07.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_07.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_08.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_08.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_09.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_09.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_10.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_11.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_12.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_13.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_14.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_15.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_16.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_17.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_18.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_19.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_20.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_21.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_22.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_23.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_23.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_24.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_25.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_25.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_26.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/CuteRat/CuteKitty_26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/Bridge.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/Bridge.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairDown.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairDown.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairLeft.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairRight.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairUp.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/ChairUp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/Lamp.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Building/Lamp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower3.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower4.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Flower4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerPink.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerPink.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerPink1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerPink1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerYellow.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/FlowerYellow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Snow2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Strick.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Strick.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Strick2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Flower/Strick2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/GreenRock.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/GreenRock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/GreenRock1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/GreenRock1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/IceRock.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/IceRock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/IceRock2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/IceRock2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/Rock.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/Rock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/Rock2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Rock/Rock2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree3.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree4.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/AuturmTree4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree3.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree4.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SakuraTree4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree3.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree4.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/SnowTree4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree2.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree3.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree4.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Tree/Tree4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomAuturmWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomAuturmWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomAuturmWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomAuturmWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomSnowWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomSnowWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomSnowWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomSnowWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Buttom/ButtomWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAuturmLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAuturmLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadAuturmWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadAuturmWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadAuturmWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadAuturmWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadSnowWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadSnowWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadSnowWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadSnowWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Head/HeadWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleAuturmWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleAuturmWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleAuturmWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleAuturmWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleSnowWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleSnowWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleSnowWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleSnowWall1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleWall.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleWall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleWall1.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Middle/MiddleWall1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Game.java" afterPath="$PROJECT_DIR$/src/sample/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ImgSprite.java" afterPath="$PROJECT_DIR$/src/sample/ImgSprite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Input.java" afterPath="$PROJECT_DIR$/src/sample/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/PlayerObj.java" afterPath="$PROJECT_DIR$/src/sample/PlayerObj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SaveMap.java" afterPath="$PROJECT_DIR$/src/sample/SaveMap.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +22,7 @@
       <file leaf-file-name="PlayerObj.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1149">
+            <state relative-caret-position="1717">
               <caret line="217" column="25" lean-forward="false" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
               <folding />
             </state>
@@ -154,7 +32,7 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="238">
               <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
               <folding />
             </state>
@@ -164,7 +42,7 @@
       <file leaf-file-name="Input.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Input.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="493">
               <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding />
             </state>
@@ -174,8 +52,8 @@
       <file leaf-file-name="ImgSprite.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ImgSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="21" column="91" lean-forward="true" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+            <state relative-caret-position="441">
+              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -186,7 +64,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="ChiChaChai" />
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="MeowKawaii" />
     </push-targets>
   </component>
   <component name="GradleLocalSettings">
@@ -213,7 +91,7 @@
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -226,135 +104,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Loading" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChiTungMeow_Poong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/ImgSprite.java" />
@@ -622,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491169520739</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add some animation">
+      <created>1491688572013</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491688572013</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -632,13 +389,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14893617" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28805238" sideWeight="0.50832075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22749591" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22749591" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -655,6 +411,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14893617" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -695,7 +452,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="d" />
     <MESSAGE value="dd" />
-    <option name="LAST_COMMIT_MESSAGE" value="dd" />
+    <MESSAGE value="add some animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some animation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -706,6 +464,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3689">
+          <caret line="217" column="25" lean-forward="false" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ImgSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -838,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="1112" column="0" lean-forward="false" selection-start-line="1112" selection-start-column="0" selection-end-line="1113" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,17 +695,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1149">
-          <caret line="217" column="25" lean-forward="false" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Input.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="493">
           <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding />
         </state>
@@ -924,16 +705,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="238">
           <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="217" column="25" lean-forward="false" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ImgSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="21" column="91" lean-forward="true" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+        <state relative-caret-position="441">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding />
         </state>
       </provider>

@@ -32,4 +32,11 @@ public interface ImgSprite {
     String kittyDir = "sprite\\Loading\\Kitty\\Kitty_";
 
     String[] rat = {ratDir + "01.png", ratDir + "02.png", ratDir + "03.png", ratDir + "04.png", ratDir + "05.png", ratDir + "06.png", ratDir + "07.png", ratDir + "08.png", ratDir + "09.png", ratDir + "10.png", ratDir + "11.png", ratDir + "12.png", ratDir + "13.png", ratDir + "14.png", ratDir + "15.png", ratDir + "16.png", ratDir + "17.png", ratDir + "18.png", ratDir + "19.png", ratDir + "20.png", ratDir + "21.png", ratDir + "22.png", ratDir + "23.png", ratDir + "24.png", ratDir + "25.png", ratDir + "26.png"};
+    String[] kitty={kittyDir+"01.png",kittyDir+"02.png",kittyDir+"03.png",kittyDir+"04.png",kittyDir+"05.png",kittyDir+"06.png",kittyDir+"07.png",kittyDir+"08.png",kittyDir+"09.png",kittyDir+"10.png",kittyDir+"11.png"};
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //BOOM!!
+    String bombDir="sprite\\bomb\\bomb";
+    String[] bomb={bombDir+"1.png",bombDir+"2.png",bombDir+"3.png",bombDir+"4.png"};
+
 }
