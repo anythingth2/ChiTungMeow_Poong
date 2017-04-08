@@ -36,7 +36,7 @@ public class SaveMap {
 
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++) {
-                mapObj[i][j] = new MapObj(ImgSprite.cat[0]);
+                mapObj[i][j] = new MapObj(ImgSprite.catUp[0]);
                 mapObj[i][j].getItemCore().setFitWidth(widthEachSprite);
                 mapObj[i][j].getItemCore().setFitHeight(heightEachSprite);
             }

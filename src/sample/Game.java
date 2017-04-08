@@ -3,6 +3,8 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
@@ -19,7 +21,7 @@ public class Game extends Application implements Sound {
     public void start(Stage primaryStage) throws Exception {
 
 
-        PlayerObj player1 = new PlayerObj("ChiChaChai", ImgSprite.cat[0]) {
+        PlayerObj player1 = new PlayerObj("ChiChaChai", "dog") {
             @Override
             public KeyCode getMoveUPkey() {
                 return KeyCode.W;
@@ -52,13 +54,26 @@ public class Game extends Application implements Sound {
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(convertFPStoMilliSecond(60)),
                 event -> {
-                    if (inputPlayer1.isMoveUp()) player1.move(Direction.UP);
-                    if (inputPlayer1.isMoveRight()) player1.move(Direction.RIGHT);
-                    if (inputPlayer1.isMoveDown()) player1.move(Direction.DOWN);
-                    if (inputPlayer1.isMoveLeft()) player1.move(Direction.LEFT);
+                    if (inputPlayer1.isMoveUp()) {
+                        player1.move(Direction.UP);
+                        player1.Up.play();
+                    }
+                    if (inputPlayer1.isMoveRight()) {
+                        player1.move(Direction.RIGHT);
+                        player1.Right.play();
+                    }
+                    if (inputPlayer1.isMoveDown()) {
+                        player1.move(Direction.DOWN);
+                        player1.Down.play();
+                    }
+                    if (inputPlayer1.isMoveLeft()) {
+                        player1.move(Direction.LEFT);
+                        player1.Left.play();
+                    }
                 }
         ));
         timeline.playFromStart();
+
 
         width = primaryStage.getWidth();
         height = primaryStage.getHeight();

@@ -20,11 +20,18 @@ public class Input {
     }
 
     public void addOnKeyPressListener() {
-        scene.setOnKeyPressed(event -> keyPressing = event.getCode());
+        scene.setOnKeyPressed(event -> {
+            keyPressing = event.getCode();
+        });
     }
 
     public void addOnKeyReleasedListener() {
-        scene.setOnKeyReleased(event -> keyPressing = null);
+        scene.setOnKeyReleased(event -> {
+            keyPressing = null;
+            playerObj.StopAnimation();
+        });
+
+
     }
 
     public boolean isMoveUp() {
