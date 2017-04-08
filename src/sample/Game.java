@@ -5,6 +5,8 @@ import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -12,14 +14,15 @@ import javafx.util.Duration;
 
 public class Game extends Application implements Sound {
 
-    private double width;
-    private double height;
+    private double width = 800;
+    private double height = 600;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        SaveMap saveMap = new SaveMap(12, 12, width, height);
 
-        PlayerObj player1 = new PlayerObj("ChiChaChai", ImgSprite.cat[0]) {
+        PlayerObj player1 = new PlayerObj(ImgSprite.red) {
             @Override
             public KeyCode getMoveUPkey() {
                 return KeyCode.W;
@@ -39,29 +42,55 @@ public class Game extends Application implements Sound {
             public KeyCode getMoveLEFTkey() {
                 return KeyCode.A;
             }
+
+            @Override
+            public KeyCode getDeployBombKey() {
+                return KeyCode.SPACE;
+            }
+        };
+
+        PlayerObj player2 = new PlayerObj(ImgSprite.blue) {
+            @Override
+            public KeyCode getMoveUPkey() {
+                return KeyCode.UP;
+            }
+
+            @Override
+            public KeyCode getMoveRIGHTkey() {
+                return KeyCode.RIGHT;
+            }
+
+            @Override
+            public KeyCode getMoveDownkey() {
+                return KeyCode.DOWN;
+            }
+
+            @Override
+            public KeyCode getMoveLEFTkey() {
+                return KeyCode.LEFT;
+            }
+
+            @Override
+            public KeyCode getDeployBombKey() {
+                return KeyCode.ENTER;
+            }
         };
 
         Pane pane = new Pane();
+        Scene scene = new Scene(pane, width, height);
         pane.getChildren().add(player1.getCharacterCore());
-        Scene scene = new Scene(pane, 800, 600);
+        pane.getChildren().add(player2.getCharacterCore());
+        for (int i = 0; i < 12; i++)
+            for (int j = 0; j < 12; j++)
+                pane.getChildren().add(saveMap.getMapObjCore(i, j));
+
         primaryStage.setTitle("ChiTungMeowPoong");
         primaryStage.setScene(scene);
         primaryStage.show();
-        Input inputPlayer1 = new Input(scene, player1);
-        Timeline timeline = new Timeline();
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(convertFPStoMilliSecond(60)),
-                event -> {
-                    if (inputPlayer1.isMoveUp()) player1.move(Direction.UP);
-                    if (inputPlayer1.isMoveRight()) player1.move(Direction.RIGHT);
-                    if (inputPlayer1.isMoveDown()) player1.move(Direction.DOWN);
-                    if (inputPlayer1.isMoveLeft()) player1.move(Direction.LEFT);
-                }
-        ));
-        timeline.playFromStart();
+        Input inputPlayer1 = new Input(scene, player1,player2);
+        inputPlayer1.startLoopInput();
 
-        width = primaryStage.getWidth();
-        height = primaryStage.getHeight();
+
 
 
     }

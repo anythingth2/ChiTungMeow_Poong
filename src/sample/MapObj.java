@@ -14,13 +14,22 @@ public class MapObj extends ObjSprite {
     public MapObj(String imgSprite) {
         itemCore = new ImageView(imgSprite);
 
+
     }
 
     public ImageView getItemCore() {
         return itemCore;
     }
 
+    @Override
+    public double getY() {
+        return itemCore.getY();
+    }
 
+    @Override
+    public double getX() {
+        return itemCore.getX();
+    }
 
     public void destroy() {
 

@@ -5,6 +5,8 @@ package sample;
  */
 
 
+import javafx.scene.image.ImageView;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -14,10 +16,10 @@ public class SaveMap {
     private int heightBlock;
     private double widthResolution;
     private double heightResolution;
-    private double widthEachSprite;
-    private double heightEachSprite;
+    private static double widthEachSprite;
+    private static double heightEachSprite;
 
-    private MapObj[][] mapObj;
+    public static MapObj[][] mapObj;
 
     public SaveMap(int widthBlock, int heightBlock, double widthResolution, double heightResolution) {
         this.widthBlock = widthBlock;
@@ -27,18 +29,32 @@ public class SaveMap {
         widthEachSprite = widthResolution / widthBlock;
         heightEachSprite = heightResolution / heightBlock;
         mapObj = new MapObj[heightBlock][widthBlock];
-
+        init();
 
     }
 
+    public ImageView getMapObjCore(int i, int j) {
+        return mapObj[i][j].getItemCore();
+    }
+
+    public static double getWidthEachSprite() {
+        return widthEachSprite;
+    }
+
+    public static double getHeightEachSprite() {
+        return heightEachSprite;
+    }
 
     private void init() {
 
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++) {
-                mapObj[i][j] = new MapObj(ImgSprite.cat[0]);
+                mapObj[i][j] = new MapObj(ImgSprite.blue);
                 mapObj[i][j].getItemCore().setFitWidth(widthEachSprite);
                 mapObj[i][j].getItemCore().setFitHeight(heightEachSprite);
+                mapObj[i][j].getItemCore().setX(150);
+                mapObj[i][j].getItemCore().setY(250);
+
             }
 
     }
@@ -48,13 +64,8 @@ public class SaveMap {
         try{
 
             FileOutputStream saveFile=new FileOutputStream("SaveObj.sav");
-
             ObjectOutputStream save = new ObjectOutputStream(saveFile);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
-            //save.writeObject(ตัวแปร);
+            save.writeObject(mapObj);
             save.close();
         }
         catch(Exception exc){
@@ -69,12 +80,7 @@ public class SaveMap {
         try{
             FileInputStream saveFile = new FileInputStream("SaveObj.sav");
             ObjectInputStream save = new ObjectInputStream(saveFile);
-
-            //ตัวแปร = (Boolean) save.readObject();
-            //ตัวแปร = (Integer) save.readObject();
-            //ตัวแปร = (String) save.readObject();
-            //ตัวแปร = (ArrayList) save.readObject();
-
+            mapObj = (MapObj[][])save.readObject();
             save.close();
         }
         catch(Exception exc){

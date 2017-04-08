@@ -13,7 +13,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
     private ImageView characterCore;
 
 
-    private double running_velo=3;
+    private double running_velo = 7;
     private int amountBomb;
     private double distanceBomb;
     private int hp;
@@ -25,14 +25,15 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
     private KeyCode moveLEFTkey;
 
 
-    public PlayerObj(String name, String character) {
+    public PlayerObj(String character) {
         this.name = name;
         characterCore = new ImageView(character);
         moveUPkey = getMoveUPkey();
         moveRIGHTkey = getMoveRIGHTkey();
         moveDownkey = getMoveDownkey();
         moveLEFTkey = getMoveLEFTkey();
-
+        characterCore.setFitHeight(SaveMap.getHeightEachSprite());
+        characterCore.setFitWidth(SaveMap.getWidthEachSprite());
     }
 
     public ImageView getCharacterCore() {
@@ -95,6 +96,8 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
 
     abstract public KeyCode getMoveLEFTkey();
 
+    abstract public KeyCode getDeployBombKey();
+
     public void setMoveUPkey(KeyCode moveUPkey) {
         this.moveUPkey = moveUPkey;
     }
@@ -115,6 +118,25 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         return name;
     }
 
+    @Override
+    public double getX() {
+        return characterCore.getX();
+    }
+
+    @Override
+    public double getY() {
+        return characterCore.getY();
+    }
+
+    @Override
+    public void setX(double x) {
+        characterCore.setX(x);
+    }
+
+    @Override
+    public void setY(double y) {
+        characterCore.setY(y);
+    }
 
     public void move(int direction) {
         switch (direction) {
@@ -125,14 +147,14 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
                 setX(getX() + running_velo);
                 break;
             case DOWN:
-                setY(getY()+running_velo);
+                setY(getY() + running_velo);
                 break;
             case LEFT:
-                setX(getX()-running_velo);
+                setX(getX() - running_velo);
                 break;
         }
 
-        update();
+        //update();
     }
 
     public void update() {
@@ -150,6 +172,36 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
 
     @Override
     public boolean checkMovable() {
+        return true;
+    }
+
+    public boolean isOverlapWithMap() {
+        double px = getX();
+        double py = getY();
+        double pWidth = SaveMap.getWidthEachSprite();
+        double pHeight = SaveMap.getHeightEachSprite();
+
+        double mapx;
+        double mapy;
+        double mapWidth = SaveMap.getWidthEachSprite();
+        double mapHeight = SaveMap.getHeightEachSprite();
+
+        for (int i = 0; i < SaveMap.mapObj.length; i++)
+            for (int j = 0; j < SaveMap.mapObj[i].length; j++) {
+                mapx = SaveMap.mapObj[i][j].getItemCore().getX();
+                mapy = SaveMap.mapObj[i][j].getItemCore().getY();
+                if (px < mapx + mapWidth
+                        && px + pWidth > mapx
+                        && py < mapy + mapHeight
+                        && py + pHeight > mapy) {
+                    return true;
+                }
+            }
+        return false;
+    }
+
+    public boolean isCanDeployBomb() {
+
         return true;
     }
 }
