@@ -1,5 +1,8 @@
 package sample;
 
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
 import javafx.scene.media.AudioClip;
 
 /**
@@ -7,5 +10,7 @@ import javafx.scene.media.AudioClip;
  */
 public interface Sound {
 
-    AudioClip BACKGROUND_MUSIC=new AudioClip("");
+    AudioClip soundMyNoise = new AudioClip(new File("noises/roll.wav").toURI().toString());
+    //soundMyNoise.play();
+    //ใส่ไฟล์เพลงแล้วลองรันดู
 }
