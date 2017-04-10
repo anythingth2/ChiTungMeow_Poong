@@ -12,5 +12,5 @@ public interface Sound {
 
     AudioClip soundMyNoise = new AudioClip(new File("noises/roll.wav").toURI().toString());
     //soundMyNoise.play();
-    //ใส่ไฟล์เพลงแล้วลองรันดู
+    //ใส่ไฟล์เพลงแล้วลองรันด
 }
