@@ -26,6 +26,7 @@ public class SaveMap {
     public static MapObj[][] mapObj;
     public static MapObj[][] mapItem;
 
+    private int rateDropItem= 15;
     private Random rand = new Random(System.currentTimeMillis());
 
     public SaveMap(int widthBlock, int heightBlock, double widthResolution, double heightResolution) {
@@ -66,7 +67,7 @@ public class SaveMap {
             }
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++) {
-                if (rand.nextInt(100) < 20) {
+                if (rand.nextInt(100) < rateDropItem) {
                     switch (rand.nextInt(4)) {
                         case 0:
                             mapItem[i][j] = new MapObj(SourceDir.AMOUNT_BOMB_ITEM,true);

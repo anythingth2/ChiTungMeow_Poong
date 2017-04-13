@@ -3,7 +3,6 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -22,7 +21,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
     private double running_velo = 3;
     private int amountBomb = 5;
-    private int distanceBomb = 3;
+    private int distanceBomb = 2;
     private int hp = 100;
     private boolean canKickBomb;
     private boolean isDead = false;
@@ -47,6 +46,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
     private double duration = 0.0;
     private Pane pane;
 
+    private double delayBombBoom = 2.5;
     int[] runBoomEff;
     int i;
 
@@ -240,14 +240,12 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         pane.getChildren().add(bomb);
         Timeline boomEffMain = new Timeline();
 
-        boomEffMain.getKeyFrames().add(new KeyFrame(Duration.millis(75), event -> {
-            bomb.setImage(new Image(SourceDir.BOOM_EFF[i++]));
-        }));
+        boomEffMain.getKeyFrames().add(new KeyFrame(Duration.millis(75), event -> bomb.setImage(new Image(SourceDir.BOOM_EFF[i++]))));
 
         boomEffMain.setOnFinished(event -> pane.getChildren().remove(bomb));
         boomEffMain.setCycleCount(6);
 
-        Timeline timeLeft = new Timeline(new KeyFrame(Duration.seconds(1)));
+        Timeline timeLeft = new Timeline(new KeyFrame(Duration.seconds(delayBombBoom)));
         timeLeft.setOnFinished((ActionEvent event) -> {
             amountBomb++;
             BOOM_SOUNDEFFECT.play();
@@ -277,6 +275,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
     }
 
     public boolean isOverlapWithMap() {
+        boolean isOverlapWithMap = false;
         double rate = 0.75;
         double px = getX() + SaveMap.getWidthEachSprite() * (1 - rate);
         double py = getY() + SaveMap.getHeightEachSprite() * (1 - rate);
@@ -292,15 +291,38 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
             for (int j = 0; j < SaveMap.mapObj[i].length; j++) {
                 mapx = SaveMap.mapObj[i][j].getItemCore().getX() + SaveMap.getWidthEachSprite() * (1 - rate);
                 mapy = SaveMap.mapObj[i][j].getItemCore().getY() + SaveMap.getHeightEachSprite() * (1 - rate);
+
                 if (px < mapx + mapWidth
                         && px + pWidth > mapx
                         && py < mapy + mapHeight
-                        && py + pHeight > mapy
-                        && !SaveMap.mapObj[i][j].isDestroyed()) {
-                    return true;
+                        && py + pHeight > mapy) {
+                    if (!SaveMap.mapObj[i][j].isDestroyed())
+                        isOverlapWithMap = true;
+                    else if (SaveMap.mapItem[i][j].isItem()
+                            && !SaveMap.mapItem[i][j].isDestroyed()) {
+                        switch (SaveMap.mapItem[i][j].getType()) {
+                            case Buff.INCREASE_BOMB:
+                                Buff.increaseAmountBomb(this);
+                                break;
+                            case Buff.INCREASE_FAST:
+                                Buff.increaseVelo(this);
+                                break;
+                            case Buff.POTION_ITEM:
+                                Buff.increaseDistanceBomb(this);
+                                break;
+                            case Buff.SHIELD_ITEM:
+                                Buff.addBarrier(this);
+                                break;
+
+                        }
+                        SaveMap.mapItem[i][j].destroy();
+                    }
+
+                } else {
+
                 }
             }
-        return false;
+        return isOverlapWithMap;
     }
 
     public boolean isCanDeployBomb() {
@@ -361,67 +383,51 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
 
         Up.setCycleCount(Timeline.INDEFINITE);
-        Up.getKeyFrames().add(new KeyFrame(Duration.millis(duration), new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (ig < n) {
-                    characterCore.setImage(new Image("" + charUp[ig]));
-                    ig++;
-                } else {
-                    characterCore.setImage(new Image("" + charUp[0]));
-                    ig = 1;
+        Up.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charUp[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charUp[0]));
+                ig = 1;
 
-                }
             }
-
         }));
 
         Down.setCycleCount(Timeline.INDEFINITE);
-        Down.getKeyFrames().add(new KeyFrame(Duration.millis(duration), new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (ig < n) {
-                    characterCore.setImage(new Image("" + charDown[ig]));
-                    ig++;
-                } else {
-                    characterCore.setImage(new Image("" + charDown[0]));
-                    ig = 1;
+        Down.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charDown[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charDown[0]));
+                ig = 1;
 
-                }
             }
-
         }));
 
         Left.setCycleCount(Timeline.INDEFINITE);
-        Left.getKeyFrames().add(new KeyFrame(Duration.millis(duration), new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (ig < n) {
-                    characterCore.setImage(new Image("" + charLeft[ig]));
-                    ig++;
-                } else {
-                    characterCore.setImage(new Image("" + charLeft[0]));
-                    ig = 1;
+        Left.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charLeft[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charLeft[0]));
+                ig = 1;
 
-                }
             }
-
         }));
 
         Right.setCycleCount(Timeline.INDEFINITE);
-        Right.getKeyFrames().add(new KeyFrame(Duration.millis(150), new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (ig < n) {
-                    characterCore.setImage(new Image("" + charRight[ig]));
-                    ig++;
-                } else {
-                    characterCore.setImage(new Image("" + charRight[0]));
-                    ig = 1;
+        Right.getKeyFrames().add(new KeyFrame(Duration.millis(150), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charRight[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charRight[0]));
+                ig = 1;
 
-                }
             }
-
         }));
     }
 

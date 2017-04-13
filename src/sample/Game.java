@@ -25,7 +25,7 @@ public class Game extends Application implements Sound {
     private Stage theStage;
 
     private Scene menu = initMainMenuScene();
-    private Scene game ;
+    private Scene game;
     private Scene characterSelect = initSelectCharacter();
     private Scene howto = initHowTo();
     private Scene credit = initCredit();
@@ -108,7 +108,7 @@ public class Game extends Application implements Sound {
             }
         };
 
-        player2 = new PlayerObj(pane,typeCharP2) {
+        player2 = new PlayerObj(pane, typeCharP2) {
             @Override
             public KeyCode getMoveUPkey() {
                 return KeyCode.UP;
@@ -270,8 +270,8 @@ public class Game extends Application implements Sound {
         playBut.setFitWidth(width * 0.1);
         playBut.relocate(width * 0.85, height * 0.85);
         playBut.setOnMouseClicked(event -> {
-            typeCharP1=SourceDir.CHAR_TYPE[countClickChooseCharP1];
-            typeCharP2=SourceDir.CHAR_TYPE[countClickChooseCharP2];
+            typeCharP1 = SourceDir.CHAR_TYPE[countClickChooseCharP1];
+            typeCharP2 = SourceDir.CHAR_TYPE[countClickChooseCharP2];
             game = initGame();
             changeScene(game);
         });
