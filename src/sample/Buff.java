@@ -10,7 +10,7 @@ public class Buff {
     }
 
     public void increaseDistanceBomb(PlayerObj playerObj) {
-        playerObj.setDistanceBomb(playerObj.getRunning_velo() + 1);
+        playerObj.setDistanceBomb(playerObj.getDistanceBomb() + 1);
     }
 
     public void increaseAmountBomb(PlayerObj playerObj) {
