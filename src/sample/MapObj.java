@@ -10,20 +10,24 @@ public class MapObj extends ObjSprite {
 
     private ImageView itemCore;
     private boolean isNothing;
+    private boolean isDestroyed = false;
+    private boolean isItem;
 
-    public MapObj() {
+    public MapObj(boolean isItem) {
         itemCore = new ImageView();
         itemCore.setVisible(false);
         isNothing = true;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
+        this.isItem = isItem;
     }
 
-    public MapObj(String imgSprite) {
+    public MapObj(String imgSprite, boolean isItem) {
         itemCore = new ImageView(imgSprite);
         isNothing = false;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
+        this.isItem = isItem;
     }
 
     public ImageView getItemCore() {
@@ -40,8 +44,17 @@ public class MapObj extends ObjSprite {
         return itemCore.getX();
     }
 
+    public void appear() {
+
+        itemCore.setVisible(true);
+        isDestroyed = false;
+    }
+
     public void destroy() {
+
         itemCore.setVisible(false);
+        isDestroyed = true;
+
     }
 
     public boolean isNothing() {
@@ -50,6 +63,14 @@ public class MapObj extends ObjSprite {
 
     public boolean isVisible() {
         return itemCore.isVisible();
+    }
+
+    public boolean isDestroyed() {
+        return isDestroyed;
+    }
+
+    public boolean isItem() {
+        return isItem;
     }
 
     public void setVisible(boolean b) {

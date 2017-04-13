@@ -57,11 +57,11 @@ public class SaveMap {
 
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++) {
-                mapObj[i][j] = new MapObj(ImgSprite.rabbitLeft[0]);
+                mapObj[i][j] = new MapObj(SourceDir.RABBIT_LEFT[0],false);
                 mapObj[i][j].getItemCore().setFitWidth(widthEachSprite);
                 mapObj[i][j].getItemCore().setFitHeight(heightEachSprite);
-                mapObj[i][j].getItemCore().setX(150);
-                mapObj[i][j].getItemCore().setY(250);
+                mapObj[i][j].getItemCore().setX(widthEachSprite*j);
+                mapObj[i][j].getItemCore().setY(heightEachSprite*i);
 
             }
         for (int i = 0; i < heightBlock; i++)
@@ -69,22 +69,22 @@ public class SaveMap {
                 if (rand.nextInt(100) < 20) {
                     switch (rand.nextInt(4)) {
                         case 0:
-                            mapItem[i][j] = new MapObj(ImgSprite.amountBombItem);
+                            mapItem[i][j] = new MapObj(SourceDir.AMOUNT_BOMB_ITEM,true);
                             break;
                         case 1:
-                            mapItem[i][j] = new MapObj(ImgSprite.fastItem);
+                            mapItem[i][j] = new MapObj(SourceDir.FAST_ITEM,true);
                             break;
                         case 2:
-                            mapItem[i][j] = new MapObj(ImgSprite.potionItem);
+                            mapItem[i][j] = new MapObj(SourceDir.POTION_ITEM,true);
                             break;
                         case 3:
-                            mapItem[i][j] = new MapObj(ImgSprite.shieldItem);
+                            mapItem[i][j] = new MapObj(SourceDir.SHIELD_ITEM,true);
                             break;
                     }
 
 
                 } else {
-                    mapItem[i][j] = new MapObj();
+                    mapItem[i][j] = new MapObj(true);
                 }
 
                 mapItem[i][j].getItemCore().setX(widthEachSprite * j);

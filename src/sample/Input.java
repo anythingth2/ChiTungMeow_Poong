@@ -2,7 +2,6 @@ package sample;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -12,20 +11,24 @@ import javafx.util.Duration;
  * Created by ChiChaChai on 30/3/2560.
  */
 public class Input {
+
     private Scene scene;
     private PlayerObj playerObj;
     private PlayerObj playerObj2;
     private KeyCode keyPressing;
+
     private boolean isMoveUp1 = false;
     private boolean isMoveLeft1 = false;
     private boolean isMoveDown1 = false;
     private boolean isMoveRight1 = false;
     private boolean isDeployBomb1 = false;
+
     private boolean isMoveUp2 = false;
     private boolean isMoveLeft2 = false;
     private boolean isMoveDown2 = false;
     private boolean isMoveRight2 = false;
     private boolean isDeployBomb2 = false;
+
     private Timeline timeline = new Timeline();
 
     private boolean isDelayBombP1 = false;
@@ -49,61 +52,57 @@ public class Input {
     }
 
     public void addOnKeyPressListener() {
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
+        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
 
-                //if (keyPressing != event.getCode()) {
-                keyPressing = event.getCode();
-                if (isPlayer1Key(keyPressing)) {
 
-                    isMoveUp1 = keyPressing == playerObj.getMoveUPkey();
+            keyPressing = event.getCode();
+            if (isPlayer1Key(keyPressing)) {
 
-                    isMoveRight1 = keyPressing == playerObj.getMoveRIGHTkey();
+                isMoveUp1 = keyPressing == playerObj.getMoveUPkey();
 
-                    isMoveDown1 = keyPressing == playerObj.getMoveDownkey();
+                isMoveRight1 = keyPressing == playerObj.getMoveRIGHTkey();
 
-                    isMoveLeft1 = keyPressing == playerObj.getMoveLEFTkey();
+                isMoveDown1 = keyPressing == playerObj.getMoveDownkey();
 
-                    isDeployBomb1 = keyPressing == playerObj.getDeployBombKey();
-                } else {
+                isMoveLeft1 = keyPressing == playerObj.getMoveLEFTkey();
 
-                    isMoveUp2 = keyPressing == playerObj2.getMoveUPkey();
+                isDeployBomb1 = keyPressing == playerObj.getDeployBombKey();
+            } else {
 
-                    isMoveRight2 = keyPressing == playerObj2.getMoveRIGHTkey();
+                isMoveUp2 = keyPressing == playerObj2.getMoveUPkey();
 
-                    isMoveDown2 = keyPressing == playerObj2.getMoveDownkey();
+                isMoveRight2 = keyPressing == playerObj2.getMoveRIGHTkey();
 
-                    isMoveLeft2 = keyPressing == playerObj2.getMoveLEFTkey();
+                isMoveDown2 = keyPressing == playerObj2.getMoveDownkey();
 
-                    isDeployBomb2 = keyPressing == playerObj2.getDeployBombKey();
-                }
+                isMoveLeft2 = keyPressing == playerObj2.getMoveLEFTkey();
+
+                isDeployBomb2 = keyPressing == playerObj2.getDeployBombKey();
             }
         });
 
     }
 
     public void addOnKeyReleasedListener() {
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                //keyPressing = null;
-                if (isPlayer1Key(event.getCode())) {
+        scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
 
-                    isMoveUp1 = false;
-                    isMoveRight1 = false;
-                    isMoveDown1 = false;
-                    isMoveLeft1 = false;
-                    isDeployBomb1 = false;
-                }
-                if (isPlayer2Key(event.getCode())) {
+            if (isPlayer1Key(event.getCode())) {
 
-                    isMoveUp2 = false;
-                    isMoveRight2 = false;
-                    isMoveDown2 = false;
-                    isMoveLeft2 = false;
-                    isDeployBomb2 = false;
-                }
+                isMoveUp1 = false;
+                isMoveRight1 = false;
+                isMoveDown1 = false;
+                isMoveLeft1 = false;
+                isDeployBomb1 = false;
+                playerObj.StopAnimation();
+            }
+            if (isPlayer2Key(event.getCode())) {
+
+                isMoveUp2 = false;
+                isMoveRight2 = false;
+                isMoveDown2 = false;
+                isMoveLeft2 = false;
+                isDeployBomb2 = false;
+                playerObj2.StopAnimation();
             }
         });
     }
@@ -128,56 +127,64 @@ public class Input {
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(1000 / 60),
                 event -> {
-                    if (isMoveUp1) {
+                    if (isMoveUp1 && !playerObj.isDead()) {
                         playerObj.move(Direction.UP);
-                        if (playerObj.isOverlapWithMap())
+                        playerObj.Up.play();
+                        if (playerObj.isOverlapWithMap() || playerObj.isOverlapWithBorder())
                             playerObj.move(Direction.DOWN);
                     }
-                    if (isMoveRight1) {
+                    if (isMoveRight1 && !playerObj.isDead()) {
                         playerObj.move(Direction.RIGHT);
-                        if (playerObj.isOverlapWithMap())
+                        playerObj.Right.play();
+                        if (playerObj.isOverlapWithMap() || playerObj.isOverlapWithBorder())
                             playerObj.move(Direction.LEFT);
                     }
-                    if (isMoveDown1) {
+                    if (isMoveDown1 && !playerObj.isDead()) {
                         playerObj.move(Direction.DOWN);
-                        if (playerObj.isOverlapWithMap())
+                        playerObj.Down.play();
+                        if (playerObj.isOverlapWithMap() || playerObj.isOverlapWithBorder())
                             playerObj.move(Direction.UP);
                     }
-                    if (isMoveLeft1) {
+                    if (isMoveLeft1 && !playerObj.isDead()) {
                         playerObj.move(Direction.LEFT);
-                        if (playerObj.isOverlapWithMap())
+                        playerObj.Left.play();
+                        if (playerObj.isOverlapWithMap() || playerObj.isOverlapWithBorder())
                             playerObj.move(Direction.RIGHT);
                     }
 
-                    if (isDeployBomb1 && !isDelayBombP1) {
+                    if (isDeployBomb1 && !isDelayBombP1 && !playerObj.isDead()) {
                         if (playerObj.isCanDeployBomb()) {
                             playerObj.deployBomb();
                             delayDeployBombP1();
                         }
                     }
 
-                    if (isMoveUp2) {
+                    if (isMoveUp2 && !playerObj2.isDead()) {
                         playerObj2.move(Direction.UP);
-                        if (playerObj2.isOverlapWithMap())
+                        playerObj2.Up.play();
+                        if (playerObj2.isOverlapWithMap() || playerObj2.isOverlapWithBorder())
                             playerObj2.move(Direction.DOWN);
                     }
-                    if (isMoveRight2) {
+                    if (isMoveRight2 && !playerObj2.isDead()) {
                         playerObj2.move(Direction.RIGHT);
-                        if (playerObj2.isOverlapWithMap())
+                        playerObj2.Right.play();
+                        if (playerObj2.isOverlapWithMap() || playerObj2.isOverlapWithBorder())
                             playerObj2.move(Direction.LEFT);
                     }
-                    if (isMoveDown2) {
+                    if (isMoveDown2 && !playerObj2.isDead()) {
                         playerObj2.move(Direction.DOWN);
-                        if (playerObj2.isOverlapWithMap())
+                        playerObj2.Down.play();
+                        if (playerObj2.isOverlapWithMap() || playerObj2.isOverlapWithBorder())
                             playerObj2.move(Direction.UP);
                     }
-                    if (isMoveLeft2) {
+                    if (isMoveLeft2 && !playerObj2.isDead()) {
                         playerObj2.move(Direction.LEFT);
-                        if (playerObj2.isOverlapWithMap())
+                        playerObj2.Left.play();
+                        if (playerObj2.isOverlapWithMap() || playerObj2.isOverlapWithBorder())
                             playerObj2.move(Direction.RIGHT);
                     }
 
-                    if (isDeployBomb2 && !isDelayBombP2) {
+                    if (isDeployBomb2 && !isDelayBombP2 && !playerObj2.isDead()) {
                         if (playerObj2.isCanDeployBomb()) {
                             playerObj2.deployBomb();
                             delayDeployBombP2();
