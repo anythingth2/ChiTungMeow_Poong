@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784327a5-8485-4035-88b5-9978563e2445" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/Next(Play).png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/Next(Play).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/Next(SelectCharacter).png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/Next(SelectCharacter).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/previous(SelectCharacter).png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UI/SelectCharacter/previous(SelectCharacter).png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/PlayerObj.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/PlayerObj.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Buff.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Buff.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$1.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$2.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/MapObj.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/MapObj.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Buff.java" afterPath="$PROJECT_DIR$/src/sample/Buff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Game.java" afterPath="$PROJECT_DIR$/src/sample/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MapObj.java" afterPath="$PROJECT_DIR$/src/sample/MapObj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/PlayerObj.java" afterPath="$PROJECT_DIR$/src/sample/PlayerObj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SaveMap.java" afterPath="$PROJECT_DIR$/src/sample/SaveMap.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -686,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492109855402</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ChiChaChai's last breath">
+      <created>1492117965939</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1492117965939</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -757,7 +760,8 @@
     <MESSAGE value="fix savemap" />
     <MESSAGE value="all of me" />
     <MESSAGE value="nothing to say" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing to say" />
+    <MESSAGE value="ChiChaChai's last breath" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChiChaChai's last breath" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
