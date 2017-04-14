@@ -1,23 +1,30 @@
 package sample;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
+
 
 /**
  * Created by ChiChaChai on 29/3/2560.
  */
-abstract public class PlayerObj extends ObjSprite implements Direction {
+abstract public class  PlayerObj extends ObjSprite implements Direction, Sound {
 
-
-    private String name;
+    private String type = "";
     private ImageView characterCore;
 
 
-    private double running_velo = 7;
-    private int amountBomb;
-    private double distanceBomb;
-    private int hp;
+    private double running_velo = 3;
+    private int amountBomb = 5;
+    private int distanceBomb = 2;
+    private int hp = 1;
     private boolean canKickBomb;
+    private boolean isDead = false;
 
     private KeyCode moveUPkey;
     private KeyCode moveRIGHTkey;
@@ -25,15 +32,46 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
     private KeyCode moveLEFTkey;
 
 
-    public PlayerObj(String character) {
-        this.name = name;
-        characterCore = new ImageView(character);
+    public Timeline Up = new Timeline();
+    public Timeline Down = new Timeline();
+    public Timeline Right = new Timeline();
+    public Timeline Left = new Timeline();
+
+
+    private int ig, n;
+    private String[] charUp;
+    private String[] charLeft;
+    private String[] charRight;
+    private String[] charDown;
+    private double duration = 0.0;
+    private Pane pane;
+
+    private double delayBombBoom = 2.5;
+    int[] runBoomEff;
+    int i;
+
+
+    public PlayerObj(Pane pane, String type) {
+        runBoomEff = new int[4 * distanceBomb];
+        this.pane = pane;
+        this.type = type;
+
+        if (type == "CAT")
+            characterCore = new ImageView(SourceDir.CAT_DOWN[0]);
+        else if (type == "DOG")
+            characterCore = new ImageView(SourceDir.DOG_DOWN[0]);
+        else if (type == "RABBIT")
+            characterCore = new ImageView(SourceDir.RABBIT_DOWN[0]);
+        else if (type == "PORING")
+            characterCore = new ImageView(SourceDir.PORING_DOWN[0]);
         moveUPkey = getMoveUPkey();
         moveRIGHTkey = getMoveRIGHTkey();
         moveDownkey = getMoveDownkey();
         moveLEFTkey = getMoveLEFTkey();
         characterCore.setFitHeight(SaveMap.getHeightEachSprite());
         characterCore.setFitWidth(SaveMap.getWidthEachSprite());
+
+        setAnimation(this.type);
     }
 
     public ImageView getCharacterCore() {
@@ -48,7 +86,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         return amountBomb;
     }
 
-    public double getDistanceBomb() {
+    public int getDistanceBomb() {
         return distanceBomb;
     }
 
@@ -58,10 +96,6 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
 
     public boolean isCanKickBomb() {
         return canKickBomb;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setCharacterCore(ImageView characterCore) {
@@ -76,8 +110,18 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         this.amountBomb = amountBomb;
     }
 
-    public void setDistanceBomb(double distanceBomb) {
+    public void setDistanceBomb(int distanceBomb) {
         this.distanceBomb = distanceBomb;
+        runBoomEff = new int[4 * distanceBomb];
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+        setAnimation(type);
     }
 
     public void setHp(int hp) {
@@ -114,8 +158,8 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
         this.moveLEFTkey = moveLEFTkey;
     }
 
-    public String getName() {
-        return name;
+    public boolean isDead() {
+        return isDead;
     }
 
     @Override
@@ -154,18 +198,74 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
                 break;
         }
 
-        //update();
+
     }
 
-    public void update() {
-        characterCore.relocate(getX(), getY());
-    }
 
     public void deployBomb() {
+        if (!isCanDeployBomb()) return;
+        DEPLOYBOMB_SOUNDEFFECT.play();
+        amountBomb--;
+        ImageView bomb = new ImageView(SourceDir.BOMB_OBJ);
+        ImageView[] boom = new ImageView[4 * distanceBomb];
+
+        for (int i = 0; i < 4 * distanceBomb; i += 4) {
+            boom[i] = new ImageView();
+            boom[i].setX(characterCore.getX());
+            boom[i].setY(characterCore.getY() - SaveMap.getHeightEachSprite() * (i / 4) * 0.75);
+            pane.getChildren().add(boom[i]);
+
+            boom[i + 1] = new ImageView();
+            boom[i + 1].setX(characterCore.getX() + SaveMap.getWidthEachSprite() * (i / 4) * 0.75);
+            boom[i + 1].setY(characterCore.getY());
+            pane.getChildren().add(boom[i + 1]);
+
+            boom[i + 2] = new ImageView();
+            boom[i + 2].setX(characterCore.getX());
+            boom[i + 2].setY(characterCore.getY() + SaveMap.getHeightEachSprite() * (i / 4) * 0.75);
+            pane.getChildren().add(boom[i + 2]);
+
+            boom[i + 3] = new ImageView();
+
+            boom[i + 3].setX(characterCore.getX() - SaveMap.getWidthEachSprite() * (i / 4) * 0.75);
+            boom[i + 3].setY(characterCore.getY());
+            pane.getChildren().add(boom[i + 3]);
+        }
+
+        bomb.setFitWidth(SaveMap.getWidthEachSprite());
+        bomb.setFitHeight(SaveMap.getHeightEachSprite());
+        bomb.setX(characterCore.getX());
+        bomb.setY(characterCore.getY());
+
+        pane.getChildren().add(bomb);
+        Timeline boomEffMain = new Timeline();
+
+        boomEffMain.getKeyFrames().add(new KeyFrame(Duration.millis(75), event -> bomb.setImage(new Image(SourceDir.BOOM_EFF[i++]))));
+
+        boomEffMain.setOnFinished(event -> pane.getChildren().remove(bomb));
+        boomEffMain.setCycleCount(6);
+
+        Timeline timeLeft = new Timeline(new KeyFrame(Duration.seconds(delayBombBoom)));
+        timeLeft.setOnFinished((ActionEvent event) -> {
+            amountBomb++;
+            BOOM_SOUNDEFFECT.play();
+            new BoomEffect(pane, bomb).start();
+            for (int j = 0; j < 4 * distanceBomb; j++)
+                new BoomEffect(pane, boom[j]).start();
+
+
+        });
+
+
+        timeLeft.playFromStart();
+
 
     }
 
     public void die() {
+        characterCore.setVisible(false);
+
+        isDead = true;
 
     }
 
@@ -176,32 +276,167 @@ abstract public class PlayerObj extends ObjSprite implements Direction {
     }
 
     public boolean isOverlapWithMap() {
-        double px = getX();
-        double py = getY();
-        double pWidth = SaveMap.getWidthEachSprite();
-        double pHeight = SaveMap.getHeightEachSprite();
+        boolean isOverlapWithMap = false;
+        double rate = 0.75;
+        double px = getX() + SaveMap.getWidthEachSprite() * (1 - rate);
+        double py = getY() + SaveMap.getHeightEachSprite() * (1 - rate);
+        double pWidth = SaveMap.getWidthEachSprite() * rate;
+        double pHeight = SaveMap.getHeightEachSprite() * rate;
 
         double mapx;
         double mapy;
-        double mapWidth = SaveMap.getWidthEachSprite();
-        double mapHeight = SaveMap.getHeightEachSprite();
+        double mapWidth = SaveMap.getWidthEachSprite() * rate;
+        double mapHeight = SaveMap.getHeightEachSprite() * rate;
 
         for (int i = 0; i < SaveMap.mapObj.length; i++)
             for (int j = 0; j < SaveMap.mapObj[i].length; j++) {
-                mapx = SaveMap.mapObj[i][j].getItemCore().getX();
-                mapy = SaveMap.mapObj[i][j].getItemCore().getY();
+                mapx = SaveMap.mapObj[i][j].getItemCore().getX() + SaveMap.getWidthEachSprite() * (1 - rate);
+                mapy = SaveMap.mapObj[i][j].getItemCore().getY() + SaveMap.getHeightEachSprite() * (1 - rate);
+
                 if (px < mapx + mapWidth
                         && px + pWidth > mapx
                         && py < mapy + mapHeight
                         && py + pHeight > mapy) {
-                    return true;
+                    if (!SaveMap.mapObj[i][j].isDestroyed())
+                        isOverlapWithMap = true;
+                    else if (SaveMap.mapItem[i][j].isItem()
+                            && !SaveMap.mapItem[i][j].isDestroyed()) {
+                        switch (SaveMap.mapItem[i][j].getType()) {
+                            case Buff.INCREASE_BOMB:
+                                Buff.increaseAmountBomb(this);
+                                break;
+                            case Buff.INCREASE_FAST:
+                                Buff.increaseVelo(this);
+                                break;
+                            case Buff.POTION_ITEM:
+                                Buff.increaseDistanceBomb(this);
+                                break;
+                            case Buff.SHIELD_ITEM:
+                                Buff.addBarrier(this);
+                                break;
+
+                        }
+                        SaveMap.mapItem[i][j].destroy();
+                    }
+
+                } else {
+
                 }
             }
-        return false;
+        return isOverlapWithMap;
     }
 
     public boolean isCanDeployBomb() {
 
-        return true;
+        return amountBomb > 0;
     }
+
+    public boolean isOverlapWithBorder() {
+
+        return getX() < 0
+                || getX() + SaveMap.getWidthEachSprite() > Game.getWidth()
+                || getY() < 0
+                || getY() + SaveMap.getHeightEachSprite() > Game.getHeight();
+    }
+
+    public void wasTakenDamage() {
+        setHp(getHp() - 1);
+        if (getHp() <= 0)
+            die();
+    }
+
+    public void setAnimation(String character) {
+
+        if (character == "CAT") {
+            charUp = SourceDir.CAT_UP;
+            charLeft = SourceDir.CAT_LEFT;
+            charRight = SourceDir.CAT_RIGHT;
+            charDown = SourceDir.CAT_DOWN;
+            duration = 150.0;
+            n = 4;
+        } else if (character == "DOG") {
+            charUp = SourceDir.DOG_UP;
+            charLeft = SourceDir.DOG_LEFT;
+            charRight = SourceDir.DOG_RIGHT;
+            charDown = SourceDir.DOG_DOWN;
+            duration = 150.0;
+            n = 3;
+        } else if (character == "RABBIT") {
+            charUp = SourceDir.RABBIT_UP;
+            charLeft = SourceDir.RABBIT_LEFT;
+            charRight = SourceDir.RABBIT_RIGHT;
+            charDown = SourceDir.RABBIT_DOWN;
+            duration = 150.0;
+            n = 6;
+        } else if (character == "PORING") {
+            charUp = SourceDir.PORING_UP;
+            charLeft = SourceDir.PORING_LEFT;
+            charRight = SourceDir.PORING_RIGHT;
+            charDown = SourceDir.PORING_DOWN;
+            duration = 150;
+            n = 6;
+        }
+
+        Up = new Timeline();
+        Right = new Timeline();
+        Down = new Timeline();
+        Left = new Timeline();
+
+
+        Up.setCycleCount(Timeline.INDEFINITE);
+        Up.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charUp[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charUp[0]));
+                ig = 1;
+
+            }
+        }));
+
+        Down.setCycleCount(Timeline.INDEFINITE);
+        Down.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charDown[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charDown[0]));
+                ig = 1;
+
+            }
+        }));
+
+        Left.setCycleCount(Timeline.INDEFINITE);
+        Left.getKeyFrames().add(new KeyFrame(Duration.millis(duration), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charLeft[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charLeft[0]));
+                ig = 1;
+
+            }
+        }));
+
+        Right.setCycleCount(Timeline.INDEFINITE);
+        Right.getKeyFrames().add(new KeyFrame(Duration.millis(150), event -> {
+            if (ig < n) {
+                characterCore.setImage(new Image("" + charRight[ig]));
+                ig++;
+            } else {
+                characterCore.setImage(new Image("" + charRight[0]));
+                ig = 1;
+
+            }
+        }));
+    }
+
+    public void StopAnimation() {
+        Up.stop();
+        Right.stop();
+        Left.stop();
+        Down.stop();
+    }
+
 }

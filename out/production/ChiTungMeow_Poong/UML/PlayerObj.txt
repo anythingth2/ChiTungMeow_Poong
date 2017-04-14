@@ -1,0 +1,16 @@
++PlayerObj extends Object
+    -name : String
+    -characterImg : File[]
+    -running_velo : double
+    -amountBomb : int
+    -distanceBomb : double
+    -hp : int
+    -canKickBomb : boolean
+    
+    -characterCore :javafx.scene.image.ImageView
+    +ListcharacterImgUrl : String[] {static} {ReadOnly}
+    --------------------------
+    +PlayerObj( name : String )
+    +move( direction : int ) : void
+    +deployBomb():void
+    +die():void

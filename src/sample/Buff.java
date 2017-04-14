@@ -5,23 +5,29 @@ package sample;
  */
 public class Buff {
 
-    public void increaseVelo(PlayerObj playerObj) {
-        playerObj.setRunning_velo(playerObj.getRunning_velo() + 1);
+
+    public static final String INCREASE_BOMB = SourceDir.AMOUNT_BOMB_ITEM;
+    public static final String INCREASE_FAST = SourceDir.FAST_ITEM;
+    public static final String POTION_ITEM = SourceDir.POTION_ITEM;
+    public static final String SHIELD_ITEM = SourceDir.SHIELD_ITEM;
+
+    public static void increaseVelo(PlayerObj playerObj) {
+        playerObj.setRunning_velo(playerObj.getRunning_velo() + 2);
     }
 
-    public void increaseDistanceBomb(PlayerObj playerObj) {
-        playerObj.setDistanceBomb(playerObj.getRunning_velo() + 1);
+    public static void increaseDistanceBomb(PlayerObj playerObj) {
+        playerObj.setDistanceBomb(playerObj.getDistanceBomb() + 1);
     }
 
-    public void increaseAmountBomb(PlayerObj playerObj) {
+    public static void increaseAmountBomb(PlayerObj playerObj) {
         playerObj.setAmountBomb(playerObj.getAmountBomb() + 1);
     }
 
-    public void kickBomb(PlayerObj playerObj, boolean kickable) {
+    public static void kickBomb(PlayerObj playerObj, boolean kickable) {
         playerObj.setCanKickBomb(kickable);
     }
 
-    public void addBarrier(PlayerObj playerObj) {
-        playerObj.setHp(playerObj.getHp() + 1);
+    public static void addBarrier(PlayerObj playerObj) {
+        playerObj.setHp(playerObj.getHp() + 4);
     }
 }
