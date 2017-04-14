@@ -296,7 +296,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
                         && px + pWidth > mapx
                         && py < mapy + mapHeight
                         && py + pHeight > mapy) {
-                    if (!SaveMap.mapObj[i][j].isDestroyed())
+                    if (!SaveMap.mapObj[i][j].isDestroyed() && !SaveMap.mapObj[i][j].isPassable())
                         isOverlapWithMap = true;
                     else if (SaveMap.mapItem[i][j].isItem()
                             && !SaveMap.mapItem[i][j].isDestroyed()) {

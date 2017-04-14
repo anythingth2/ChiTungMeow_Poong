@@ -58,7 +58,7 @@ public class BoomEffect {
                         && py < mapy + mapHeight
                         && py + pHeight > mapy
                         && !SaveMap.mapObj[i][j].isDestroyed()) {
-                    if (!SaveMap.mapObj[i][j].isItem()) {
+                    if (!SaveMap.mapObj[i][j].isItem() && !SaveMap.mapObj[i][j].isPassable()) {
                         SaveMap.mapObj[i][j].destroy();
                         SaveMap.mapItem[i][j].appear();
                     }

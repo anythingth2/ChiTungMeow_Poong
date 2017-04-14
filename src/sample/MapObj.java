@@ -10,9 +10,11 @@ public class MapObj extends ObjSprite {
 
     private ImageView itemCore;
     private boolean isNothing;
+    private boolean isPassable=false;
     private boolean isDestroyed = false;
     private boolean isItem;
-private String type="";
+    private String type = "";
+
     public MapObj(boolean isItem) {
         itemCore = new ImageView();
         itemCore.setVisible(false);
@@ -47,6 +49,14 @@ private String type="";
 
     public String getType() {
         return type;
+    }
+
+    public boolean isPassable() {
+        return isPassable;
+    }
+
+    public void setPassable(boolean passable) {
+        isPassable = passable;
     }
 
     public void appear() {

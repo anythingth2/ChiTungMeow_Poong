@@ -61,4 +61,13 @@ public interface SourceDir {
     String BOOM_SOUND_EFF = "out\\production\\ChiTungMeow_Poong\\sound\\boomSoundEff.mp3";
     String DEPLOY_BOMB_SOUND_EFF = "out\\production\\ChiTungMeow_Poong\\sound\\deployBombSoundEff.mp3";
 
+    String COWALL = "sprite\\Obj\\Wall\\Middle\\MiddleAuturmWall.png";
+    String ROWALL = "sprite\\Obj\\Wall\\Middle\\MiddleAuturmWall1.png";
+    String GROUND = "sprite\\Obj\\Ground\\Auturm.png";
+    String TL = "sprite\\Obj\\Wall\\Cornor\\WallAutrumLU.png";
+    String TR = "sprite\\Obj\\Wall\\Cornor\\WallAutrumRU.png";
+    String BR = "sprite\\Obj\\Wall\\Cornor\\WallAutrumRD.png";
+    String T = "sprite\\Obj\\Wall\\Head\\HeadAuturmWall.png";
+    String B = "sprite\\Obj\\Wall\\Buttom\\ButtomAuturmWall.png";
+    String BL = "sprite\\Obj\\Wall\\Cornor\\WallAuturmLD.png";
 }

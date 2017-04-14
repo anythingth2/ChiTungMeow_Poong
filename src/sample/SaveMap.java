@@ -8,6 +8,9 @@ package sample;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import java.util.*;
+import java.io.*;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -26,8 +29,10 @@ public class SaveMap {
     public static MapObj[][] mapObj;
     public static MapObj[][] mapItem;
 
-    private int rateDropItem= 15;
+    private int rateDropItem = 15;
     private Random rand = new Random(System.currentTimeMillis());
+
+    public char[][] myArray = new char[15][15];
 
     public SaveMap(int widthBlock, int heightBlock, double widthResolution, double heightResolution) {
         this.widthBlock = widthBlock;
@@ -38,6 +43,7 @@ public class SaveMap {
         heightEachSprite = heightResolution / heightBlock;
         mapObj = new MapObj[heightBlock][widthBlock];
         mapItem = new MapObj[heightBlock][widthBlock];
+        readMap();
         init();
 
     }
@@ -56,13 +62,49 @@ public class SaveMap {
 
     private void init() {
 
-        for (int i = 0; i < heightBlock; i++)
-            for (int j = 0; j < widthBlock; j++) {
-                mapObj[i][j] = new MapObj(SourceDir.RABBIT_LEFT[0],false);
+        for (int i = 0; i < 13; i++)
+            for (int j = 0; j < 15; j++) {
+
+
+                switch (myArray[i][j]) {
+                    case '#':
+                        mapObj[i][j] = new MapObj(SourceDir.COWALL, false);
+                        break;
+                    case 's':
+                        mapObj[i][j] = new MapObj(SourceDir.GROUND, false);
+                        mapObj[i][j].setPassable(true);
+                        break;
+                    case 'o':
+                        mapObj[i][j] = new MapObj(SourceDir.T, false);
+                        break;
+                    case 'i':
+                        mapObj[i][j] = new MapObj(SourceDir.B, false);
+                        break;
+                    case '5':
+                        mapObj[i][j] = new MapObj(SourceDir.ROWALL, false);
+                        break;
+                    case 't':
+                        mapObj[i][j] = new MapObj(SourceDir.TL, false);
+                        break;
+                    case 'b':
+                        mapObj[i][j] = new MapObj(SourceDir.TR, false);
+                        break;
+                    case 'j':
+                        mapObj[i][j] = new MapObj(SourceDir.BL, false);
+                        break;
+                    case 'h':
+                        mapObj[i][j] = new MapObj(SourceDir.BR, false);
+                        break;
+                    default:
+                        mapObj[i][j] = new MapObj( false);
+                        break;
+                }
+
+
                 mapObj[i][j].getItemCore().setFitWidth(widthEachSprite);
                 mapObj[i][j].getItemCore().setFitHeight(heightEachSprite);
-                mapObj[i][j].getItemCore().setX(widthEachSprite*j);
-                mapObj[i][j].getItemCore().setY(heightEachSprite*i);
+                mapObj[i][j].getItemCore().setX(widthEachSprite * j);
+                mapObj[i][j].getItemCore().setY(heightEachSprite * i);
 
             }
         for (int i = 0; i < heightBlock; i++)
@@ -70,16 +112,16 @@ public class SaveMap {
                 if (rand.nextInt(100) < rateDropItem) {
                     switch (rand.nextInt(4)) {
                         case 0:
-                            mapItem[i][j] = new MapObj(SourceDir.AMOUNT_BOMB_ITEM,true);
+                            mapItem[i][j] = new MapObj(SourceDir.AMOUNT_BOMB_ITEM, true);
                             break;
                         case 1:
-                            mapItem[i][j] = new MapObj(SourceDir.FAST_ITEM,true);
+                            mapItem[i][j] = new MapObj(SourceDir.FAST_ITEM, true);
                             break;
                         case 2:
-                            mapItem[i][j] = new MapObj(SourceDir.POTION_ITEM,true);
+                            mapItem[i][j] = new MapObj(SourceDir.POTION_ITEM, true);
                             break;
                         case 3:
-                            mapItem[i][j] = new MapObj(SourceDir.SHIELD_ITEM,true);
+                            mapItem[i][j] = new MapObj(SourceDir.SHIELD_ITEM, true);
                             break;
                     }
 
@@ -109,7 +151,7 @@ public class SaveMap {
 
         try {
 
-            FileOutputStream saveFile = new FileOutputStream("SaveObj.sav");
+            FileOutputStream saveFile = new FileOutputStream("SaveObj.txt");
             ObjectOutputStream save = new ObjectOutputStream(saveFile);
             save.writeObject(mapObj);
             save.close();
@@ -122,14 +164,19 @@ public class SaveMap {
 
     public void readMap() {
 
-        try {
-            FileInputStream saveFile = new FileInputStream("SaveObj.sav");
-            ObjectInputStream save = new ObjectInputStream(saveFile);
-            mapObj = (MapObj[][]) save.readObject();
-            save.close();
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
 
+        try {
+            Scanner scanner = new Scanner(new File("SaveObj.txt"));
+            for (int row = 0; scanner.hasNextLine(); row++) {
+                String string = scanner.nextLine();
+                for (int i = 0; i < string.length(); i++)
+                    myArray[row][i] = string.charAt(i);
+            }
+
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        for (int i = 0; i < myArray.length; i++)
+            System.out.println(Arrays.toString(myArray[i]));
     }
 }

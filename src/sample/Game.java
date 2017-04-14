@@ -3,9 +3,7 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
@@ -79,7 +77,7 @@ public class Game extends Application implements Sound {
         pane.getChildren().add(bg);
         Scene scene = new Scene(pane, width, height);
 
-        SaveMap saveMap = new SaveMap(12, 12, width, height);
+        SaveMap saveMap = new SaveMap(15, 13, width, height);
 
         player1 = new PlayerObj(pane, typeCharP1) {
             @Override
@@ -138,10 +136,10 @@ public class Game extends Application implements Sound {
         Input inputPlayer = new Input(scene, player1, player2);
         inputPlayer.startLoopInput();
 
-
+        saveMap.addItem(pane);
         pane.getChildren().add(player1.getCharacterCore());
         pane.getChildren().add(player2.getCharacterCore());
-        saveMap.addItem(pane);
+
 
 
         return scene;
