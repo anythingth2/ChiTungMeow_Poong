@@ -70,4 +70,23 @@ public interface SourceDir {
     String T = "sprite\\Obj\\Wall\\Head\\HeadAuturmWall.png";
     String B = "sprite\\Obj\\Wall\\Buttom\\ButtomAuturmWall.png";
     String BL = "sprite\\Obj\\Wall\\Cornor\\WallAuturmLD.png";
+
+    String LC = "sprite\\Obj\\Building\\ChairLeft.png";
+    String RC = "sprite\\Obj\\Building\\ChairRight.png";
+    String LAMP = "sprite\\Obj\\Building\\Lamp.png";
+
+    String TREE = "sprite\\Obj\\Bush\\Bush.png";
+    String TREE2 = "sprite\\Obj\\Bush\\Bush1.png";
+
+    String ROCK = "sprite\\Obj\\Rock\\GreenRock.png";
+    String ROCK2 = "sprite\\Obj\\Rock\\IceRock.png";
+
+    String SAKURA = "sprite\\Obj\\Tree\\SakuraTree3.png";
+    String SNOWT = "sprite\\Obj\\Tree\\SnowTree4.png";
+
+
+
+    String STATUS_BG = "UI\\status\\play.png";
+    String LIFE = "UI\\status\\Life.png";
+
 }

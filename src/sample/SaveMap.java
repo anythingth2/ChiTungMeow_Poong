@@ -7,6 +7,7 @@ package sample;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import sun.java2d.Surface;
 
 import java.util.*;
 import java.io.*;
@@ -28,7 +29,7 @@ public class SaveMap {
 
     public static MapObj[][] mapObj;
     public static MapObj[][] mapItem;
-
+    public static MapObj[][] mapBG;
     private int rateDropItem = 15;
     private Random rand = new Random(System.currentTimeMillis());
 
@@ -43,6 +44,7 @@ public class SaveMap {
         heightEachSprite = heightResolution / heightBlock;
         mapObj = new MapObj[heightBlock][widthBlock];
         mapItem = new MapObj[heightBlock][widthBlock];
+        mapBG = new MapObj[heightBlock][widthBlock];
         readMap();
         init();
 
@@ -62,42 +64,55 @@ public class SaveMap {
 
     private void init() {
 
-        for (int i = 0; i < 13; i++)
-            for (int j = 0; j < 15; j++) {
 
+        for (int i = 0; i < heightBlock; i++)
+            for (int j = 0; j < widthBlock; j++) {
+                mapBG[i][j] = new MapObj(SourceDir.GROUND, false);
+                mapBG[i][j].getItemCore().setFitWidth(widthEachSprite);
+                mapBG[i][j].getItemCore().setFitHeight(heightEachSprite);
+                mapBG[i][j].getItemCore().setX(widthEachSprite * j);
+                mapBG[i][j].getItemCore().setY(heightEachSprite * i);
+            }
 
-                switch (myArray[i][j]) {
-                    case '#':
-                        mapObj[i][j] = new MapObj(SourceDir.COWALL, false);
-                        break;
-                    case 's':
-                        mapObj[i][j] = new MapObj(SourceDir.GROUND, false);
-                        mapObj[i][j].setPassable(true);
-                        break;
-                    case 'o':
-                        mapObj[i][j] = new MapObj(SourceDir.T, false);
-                        break;
-                    case 'i':
-                        mapObj[i][j] = new MapObj(SourceDir.B, false);
-                        break;
-                    case '5':
-                        mapObj[i][j] = new MapObj(SourceDir.ROWALL, false);
-                        break;
-                    case 't':
-                        mapObj[i][j] = new MapObj(SourceDir.TL, false);
-                        break;
-                    case 'b':
-                        mapObj[i][j] = new MapObj(SourceDir.TR, false);
-                        break;
-                    case 'j':
-                        mapObj[i][j] = new MapObj(SourceDir.BL, false);
-                        break;
-                    case 'h':
-                        mapObj[i][j] = new MapObj(SourceDir.BR, false);
-                        break;
-                    default:
-                        mapObj[i][j] = new MapObj( false);
-                        break;
+        for (int i = 0; i < heightBlock; i++)
+            for (int j = 0; j < widthBlock; j++) {
+
+                if (myArray[i][j] == '#') {
+                    mapObj[i][j] = new MapObj(SourceDir.COWALL, false);
+                } else if (myArray[i][j] == 's') {
+                    mapObj[i][j] = new MapObj(false);
+                } else if (myArray[i][j] == 'o') {
+                    mapObj[i][j] = new MapObj(SourceDir.T, false);
+                } else if (myArray[i][j] == 'i') {
+                    mapObj[i][j] = new MapObj(SourceDir.B, false);
+                } else if (myArray[i][j] == '5') {
+                    mapObj[i][j] = new MapObj(SourceDir.ROWALL, false);
+                } else if (myArray[i][j] == 't') {
+                    mapObj[i][j] = new MapObj(SourceDir.TL, false);
+                } else if (myArray[i][j] == 'b') {
+                    mapObj[i][j] = new MapObj(SourceDir.TR, false);
+                } else if (myArray[i][j] == 'j') {
+                    mapObj[i][j] = new MapObj(SourceDir.BL, false);
+                } else if (myArray[i][j] == 'h') {
+                    mapObj[i][j] = new MapObj(SourceDir.BR, false);
+                } else if (myArray[i][j] == 'm') {
+                    mapObj[i][j] = new MapObj(SourceDir.LC, false);
+                } else if (myArray[i][j] == 'n') {
+                    mapObj[i][j] = new MapObj(SourceDir.RC, false);
+                } else if (myArray[i][j] == 'l') {
+                    mapObj[i][j] = new MapObj(SourceDir.LAMP, false);
+                } else if (myArray[i][j] == '7') {
+                    mapObj[i][j] = new MapObj(SourceDir.SAKURA, false);
+                } else if (myArray[i][j] == 'r') {
+                    mapObj[i][j] = new MapObj(SourceDir.ROCK, false);
+                } else if (myArray[i][j] == 'w') {
+                    mapObj[i][j] = new MapObj(SourceDir.SNOWT, false);
+                } else if (myArray[i][j] == '8') {
+                    mapObj[i][j] = new MapObj(SourceDir.TREE, false);
+                } else if (myArray[i][j] == '9') {
+                    mapObj[i][j] = new MapObj(SourceDir.TREE2, false);
+                } else {
+                    mapObj[i][j] = new MapObj(false);
                 }
 
 
@@ -107,6 +122,7 @@ public class SaveMap {
                 mapObj[i][j].getItemCore().setY(heightEachSprite * i);
 
             }
+
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++) {
                 if (rand.nextInt(100) < rateDropItem) {
@@ -137,6 +153,11 @@ public class SaveMap {
     }
 
     public void addItem(Pane pane) {
+
+        for (int i = 0; i < heightBlock; i++)
+            for (int j = 0; j < widthBlock; j++)
+                pane.getChildren().add(mapBG[i][j].getItemCore());
+
         for (int i = 0; i < heightBlock; i++)
             for (int j = 0; j < widthBlock; j++)
                 pane.getChildren().add(mapObj[i][j].getItemCore());
@@ -167,16 +188,14 @@ public class SaveMap {
 
         try {
             Scanner scanner = new Scanner(new File("SaveObj.txt"));
-            for (int row = 0; scanner.hasNextLine(); row++) {
-                String string = scanner.nextLine();
-                for (int i = 0; i < string.length(); i++)
-                    myArray[row][i] = string.charAt(i);
+            for (int row = 0; scanner.hasNextLine() && row < 15; row++) {
+                char[] chars = scanner.nextLine().toCharArray();
+                for (int i = 0; i < 15 && i < chars.length; i++) {
+                    myArray[row][i] = chars[i];
+                }
             }
-
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
-        for (int i = 0; i < myArray.length; i++)
-            System.out.println(Arrays.toString(myArray[i]));
     }
 }

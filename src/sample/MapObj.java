@@ -10,7 +10,7 @@ public class MapObj extends ObjSprite {
 
     private ImageView itemCore;
     private boolean isNothing;
-    private boolean isPassable=false;
+    private boolean isPassable = false;
     private boolean isDestroyed = false;
     private boolean isItem;
     private String type = "";
@@ -19,6 +19,7 @@ public class MapObj extends ObjSprite {
         itemCore = new ImageView();
         itemCore.setVisible(false);
         isNothing = true;
+        isPassable = true;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
         this.isItem = isItem;
@@ -27,6 +28,7 @@ public class MapObj extends ObjSprite {
     public MapObj(String imgSprite, boolean isItem) {
         itemCore = new ImageView(imgSprite);
         isNothing = false;
+        isPassable = false;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
         this.isItem = isItem;

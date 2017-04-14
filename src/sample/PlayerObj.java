@@ -22,7 +22,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
     private double running_velo = 3;
     private int amountBomb = 5;
     private int distanceBomb = 2;
-    private int hp = 100;
+    private int hp = 3;
     private boolean canKickBomb;
     private boolean isDead = false;
 
@@ -72,6 +72,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         characterCore.setFitWidth(SaveMap.getWidthEachSprite());
 
         setAnimation(this.type);
+
     }
 
     public ImageView getCharacterCore() {
@@ -201,6 +202,14 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
     }
 
+    public void syncLife() {
+        if (getType() == Game.getTypeCharP1())
+            for (int i = 0; i < 6; i++)
+                Game.life[i].setVisible(i < hp);
+        else
+            for (int i = 0; i < 6; i++)
+                Game.life2[i].setVisible(i < hp);
+    }
 
     public void deployBomb() {
         if (!isCanDeployBomb()) return;
@@ -318,8 +327,6 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
                         SaveMap.mapItem[i][j].destroy();
                     }
 
-                } else {
-
                 }
             }
         return isOverlapWithMap;
@@ -340,6 +347,10 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
     public void wasTakenDamage() {
         setHp(getHp() - 1);
+        for (int i = 0; i < 6; i++)
+
+            Game.life[i].setVisible(i < hp);
+
         if (getHp() <= 0)
             die();
     }

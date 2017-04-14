@@ -3,6 +3,9 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -14,12 +17,12 @@ import javafx.util.Duration;
 
 public class Game extends Application implements Sound {
 
-    private static double width = 800;
-    private static double height = 600;
+    private static double width = 1440;
+    private static double height = 800;
     private static PlayerObj player1;
     private static PlayerObj player2;
-    private String typeCharP1;
-    private String typeCharP2;
+    private static String typeCharP1;
+    private static String typeCharP2;
     private Stage theStage;
 
     private Scene menu = initMainMenuScene();
@@ -28,8 +31,15 @@ public class Game extends Application implements Sound {
     private Scene howto = initHowTo();
     private Scene credit = initCredit();
 
+    public static Pane bar;
+    public static Pane bar2;
+    public static ImageView[] life;
+    public static ImageView[] life2;
+
     private int countClickChooseCharP1 = 0;
     private int countClickChooseCharP2 = 1;
+    private int countHpP1;
+    private int countHpP2;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -76,8 +86,52 @@ public class Game extends Application implements Sound {
         bg.setFitHeight(height);
         pane.getChildren().add(bg);
         Scene scene = new Scene(pane, width, height);
-
         SaveMap saveMap = new SaveMap(15, 13, width, height);
+
+        bar = new Pane();
+        bar2 = new Pane();
+        bar.setTranslateX(0);
+        bar.setTranslateY(0);
+        bar2.setTranslateX(width * 0.8);
+        bar2.setTranslateY(0);
+
+
+        ImageView status = new ImageView(SourceDir.STATUS_BG);
+        status.setFitHeight(height * 0.1);
+        status.setFitWidth(width * 0.1);
+
+        ImageView status2 = new ImageView(SourceDir.STATUS_BG);
+        status2.setFitHeight(height * 0.1);
+        status2.setFitWidth(width * 0.1);
+
+        bar.getChildren().add(status);
+        bar2.getChildren().add(status2);
+
+        life = new ImageView[6];
+        life2 = new ImageView[6];
+        for (int i = 0; i < 6; i++) {
+            life[i] = new ImageView(SourceDir.LIFE);
+            life2[i] = new ImageView(SourceDir.LIFE);
+
+            life[i].setFitHeight(status.getFitWidth() / 8);
+            life[i].setFitWidth(status.getFitWidth() / 8);
+
+            life2[i].setFitHeight(status.getFitWidth() / 8);
+            life2[i].setFitWidth(status.getFitWidth() / 8);
+
+            life[i].setTranslateX(status.getFitWidth() * 0.2 + i * life[i].getFitWidth());
+            life[i].setTranslateY(status.getFitHeight() * 0.5);
+
+            life2[i].setTranslateX(status.getFitWidth() * 0.2 + i * life[i].getFitWidth());
+            life2[i].setTranslateY(status.getFitHeight() * 0.5);
+
+//            life[i].setVisible(false);
+//            life2[i].setVisible(false);
+
+            bar.getChildren().add(life[i]);
+            bar2.getChildren().add(life2[i]);
+        }
+
 
         player1 = new PlayerObj(pane, typeCharP1) {
             @Override
@@ -105,7 +159,7 @@ public class Game extends Application implements Sound {
                 return KeyCode.SPACE;
             }
         };
-
+        player1.syncLife();
         player2 = new PlayerObj(pane, typeCharP2) {
             @Override
             public KeyCode getMoveUPkey() {
@@ -132,15 +186,21 @@ public class Game extends Application implements Sound {
                 return KeyCode.ENTER;
             }
         };
-
+        player2.syncLife();
         Input inputPlayer = new Input(scene, player1, player2);
         inputPlayer.startLoopInput();
 
         saveMap.addItem(pane);
+
         pane.getChildren().add(player1.getCharacterCore());
+        bar.addEventHandler(EventType.ROOT, new EventHandler<Event>() {
+            @Override
+            public void handle(Event event) {
+
+            }
+        });
         pane.getChildren().add(player2.getCharacterCore());
-
-
+        pane.getChildren().addAll(bar, bar2);
 
         return scene;
     }
@@ -366,6 +426,13 @@ public class Game extends Application implements Sound {
 
     private void CS4(MouseEvent e) {
         changeScene(credit);
+    }
+    public static String getTypeCharP1() {
+        return typeCharP1;
+    }
+
+    public static String getTypeCharP2() {
+        return typeCharP2;
     }
 
     public static double getWidth() {
