@@ -29,4 +29,7 @@ public abstract class HowToScene extends Scene  {
     }
 
     public abstract void setHome(MouseEvent e);
+    public void delete(){
+        pane = null;
+    }
 }

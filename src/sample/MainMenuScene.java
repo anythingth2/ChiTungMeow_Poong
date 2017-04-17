@@ -32,12 +32,16 @@ abstract public class MainMenuScene extends Scene {
         credit.relocate(width / 100 * 79, height / 100 * 83);
 
 
-        BG.setOnMouseClicked(this::setStart);
+        start.setOnMouseClicked(this::setStart);
         howto.setOnMouseClicked(this::setHowto);
         exit.setOnMouseClicked(this::setExit);
         credit.setOnMouseClicked(this::setCredit);
 
         pane.getChildren().addAll(BG,start,howto,exit,credit);
+    }
+
+    public void delete(){
+        pane = null;
     }
 
 

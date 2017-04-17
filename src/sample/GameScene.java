@@ -46,9 +46,9 @@ public class GameScene extends Scene {
         resP2posY = width * 0.75 - lose.getFitWidth() / 2;
         resP2posY = height / 2 - lose.getFitHeight() / 2;
 
-        homeBut.setFitWidth(width*0.1);
-        homeBut.setFitHeight(height*0.1);
-        homeBut.relocate(width*0.8,height*0.8);
+        homeBut.setFitWidth(width * 0.1);
+        homeBut.setFitHeight(height * 0.1);
+        homeBut.relocate(width * 0.8, height * 0.8);
         homeBut.setVisible(false);
         homeBut.setOnMouseClicked(event -> Game.changeScene(Game.getMenu()));
         win.relocate(width * 0.25 - win.getFitWidth() / 2, height / 2 - win.getFitHeight() / 2);
@@ -127,11 +127,11 @@ public class GameScene extends Scene {
             }
         };
 
-        player1.setX(width/2-player1.getCharacterCore().getFitWidth());
-        player1.setY(height*0.3);
+        player1.setX(width / 2 - player1.getCharacterCore().getFitWidth());
+        player1.setY(height * 0.3);
 
-        player2.setX(width/2-player2.getCharacterCore().getFitWidth());
-        player2.setY(height*0.8);
+        player2.setX(width / 2 - player2.getCharacterCore().getFitWidth());
+        player2.setY(height * 0.8);
         player1.setHp(startLife);
         player2.setHp(startLife);
 
@@ -194,7 +194,8 @@ public class GameScene extends Scene {
         });
         pane.getChildren().add(player2.getCharacterCore());
         pane.getChildren().addAll(bar, bar2);
-        pane.getChildren().addAll(win, lose,homeBut);
+        pane.getChildren().addAll(win, lose, homeBut);
+
 
     }
 
@@ -212,6 +213,10 @@ public class GameScene extends Scene {
 
     public ImageView[] getLife2() {
         return life2;
+    }
+
+    public void delete() {
+        pane = null;
     }
 
     public void syncLife() {

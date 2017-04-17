@@ -180,4 +180,8 @@ public class SelectCharacterScene extends Scene {
     public String getTypeCharP2() {
         return typeCharP2;
     }
+
+    public void delete() {
+        pane = null;
+    }
 }
