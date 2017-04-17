@@ -19,12 +19,10 @@ public class BoomEffect {
     public BoomEffect(Pane pane, ImageView img) {
         super();
         this.img = img;
-        img.setFitHeight(SaveMap.getHeightEachSprite() * 0.75);
-        img.setFitWidth(SaveMap.getWidthEachSprite() * 0.75);
+        img.setFitHeight(SaveMap.getHeightEachSprite() * rate);
+        img.setFitWidth(SaveMap.getWidthEachSprite() * rate);
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(75), event -> img.setImage(new Image(SourceDir.BOOM_EFF[i++]))));
         timeline.setOnFinished(event -> {
-            if (isTakeDamageToPlayer1()) Game.getPlayer1().wasTakenDamage();
-            if (isTakeDamageToPlayer2()) Game.getPlayer2().wasTakenDamage();
             destoryMap();
             pane.getChildren().remove(img);
 
@@ -36,47 +34,78 @@ public class BoomEffect {
         timeline.playFromStart();
     }
 
+    public Timeline getTimeline() {
+        return timeline;
+    }
+
     private void destoryMap() {
 
 
         double px = img.getX() + img.getFitWidth() * (1 - rate);
         double py = img.getY() + img.getFitHeight() * (1 - rate);
-        double pWidth = img.getFitWidth() * rate;
-        double pHeight = img.getFitHeight() * rate;
+        double pWidth = img.getFitWidth();
+        double pHeight = img.getFitHeight();
 
         double mapx;
         double mapy;
-        double mapWidth = SaveMap.getWidthEachSprite();
-        double mapHeight = SaveMap.getHeightEachSprite();
+        double mapWidth = SaveMap.getWidthEachSprite() * rate;
+        double mapHeight = SaveMap.getHeightEachSprite() * rate;
 
-        for (int i = 0; i < SaveMap.mapObj.length; i++)
-            for (int j = 0; j < SaveMap.mapObj[i].length; j++) {
-                mapx = SaveMap.mapObj[i][j].getItemCore().getX();
-                mapy = SaveMap.mapObj[i][j].getItemCore().getY();
-                if (px < mapx + mapWidth
-                        && px + pWidth > mapx
-                        && py < mapy + mapHeight
-                        && py + pHeight > mapy
-                        && !SaveMap.mapObj[i][j].isDestroyed()) {
-                    if (!SaveMap.mapObj[i][j].isItem() && !SaveMap.mapObj[i][j].isPassable()) {
-                        SaveMap.mapObj[i][j].destroy();
-                        SaveMap.mapItem[i][j].appear();
+        for (int i = 0; i < SaveMap.mapTree.length; i++)
+            for (int j = 0; j < SaveMap.mapTree[i].length; j++) {
+                if (!SaveMap.mapTree[i][j].isDestoryable()) {
+
+                } else {
+                    mapx = SaveMap.mapTree[i][j].getItemCore().getX() + SaveMap.mapTree[i][j].getItemCore().getFitWidth() * (1 - rate);
+                    mapy = SaveMap.mapTree[i][j].getItemCore().getY() + SaveMap.mapTree[i][j].getItemCore().getFitHeight() * (1 - rate);
+
+                    if (px < mapx + mapWidth
+                            && px + pWidth > mapx
+                            && py < mapy + mapHeight
+                            && py + pHeight > mapy
+                            ) {
+
+                        if (SaveMap.mapTree[i][j].isItem()) {
+                            SaveMap.mapTree[i][j].transformToItem();
+                        } else {
+                            SaveMap.mapTree[i][j].destroy();
+                        }
+                    }
+                }
+
+                if (!SaveMap.mapWall[i][j].isDestoryable() || SaveMap.mapWall[i][j].isDestroyed()) {
+
+                } else {
+                    mapx = SaveMap.mapWall[i][j].getItemCore().getX() + SaveMap.mapWall[i][j].getItemCore().getFitWidth() * (1 - rate);
+                    mapy = SaveMap.mapWall[i][j].getItemCore().getY() + SaveMap.mapWall[i][j].getItemCore().getFitHeight() * (1 - rate);
+
+                    if (px < mapx + mapWidth
+                            && px + pWidth > mapx
+                            && py < mapy + mapHeight
+                            && py + pHeight > mapy
+                            ) {
+                        System.out.println("BOOM TOUCH YOUR");
+                        if (SaveMap.mapWall[i][j].isItem()) {
+                            SaveMap.mapWall[i][j].transformToItem();
+                        } else {
+                            SaveMap.mapWall[i][j].destroy();
+                        }
                     }
                 }
             }
 
     }
 
-    private boolean isTakeDamageToPlayer1() {
-        double px = img.getX();
-        double py = img.getY();
+    public boolean isTakeDamageToPlayer1() {
+        double px = img.getX() + img.getFitWidth() * (1 - rate);
+        double py = img.getY() + img.getFitHeight() * (1 - rate);
         double pWidth = img.getFitWidth();
         double pHeight = img.getFitHeight();
 
-        double mapx = Game.getPlayer1().getX();
-        double mapy = Game.getPlayer1().getY();
-        double mapWidth = SaveMap.getWidthEachSprite();
-        double mapHeight = SaveMap.getHeightEachSprite();
+        double mapx = GameScene.getPlayer1().getX() + GameScene.getPlayer1().getCharacterCore().getFitWidth() * (1 - rate);
+        double mapy = GameScene.getPlayer1().getY() + GameScene.getPlayer2().getCharacterCore().getFitHeight() * (1 - rate);
+        double mapWidth = SaveMap.getWidthEachSprite() * rate;
+        double mapHeight = SaveMap.getHeightEachSprite() * rate;
 
         return px < mapx + mapWidth
                 && px + pWidth > mapx
@@ -84,16 +113,16 @@ public class BoomEffect {
                 && py + pHeight > mapy;
     }
 
-    private boolean isTakeDamageToPlayer2() {
-        double px = img.getX();
-        double py = img.getY();
-        double pWidth = SaveMap.getWidthEachSprite();
-        double pHeight = SaveMap.getHeightEachSprite();
+    public boolean isTakeDamageToPlayer2() {
+        double px = img.getX() + img.getFitWidth() * (1 - rate);
+        double py = img.getY() + img.getFitHeight() * (1 - rate);
+        double pWidth = img.getFitWidth();
+        double pHeight = img.getFitHeight();
 
-        double mapx = Game.getPlayer2().getX();
-        double mapy = Game.getPlayer2().getY();
-        double mapWidth = SaveMap.getWidthEachSprite();
-        double mapHeight = SaveMap.getHeightEachSprite();
+        double mapx = GameScene.getPlayer2().getX() + GameScene.getPlayer2().getCharacterCore().getFitWidth() * (1 - rate);
+        double mapy = GameScene.getPlayer2().getY() + GameScene.getPlayer2().getCharacterCore().getFitHeight() * (1 - rate);
+        double mapWidth = SaveMap.getWidthEachSprite() * rate;
+        double mapHeight = SaveMap.getHeightEachSprite() * rate;
 
         return px < mapx + mapWidth
                 && px + pWidth > mapx

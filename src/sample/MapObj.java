@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 
@@ -9,31 +10,42 @@ import javafx.scene.image.ImageView;
 public class MapObj extends ObjSprite {
 
     private ImageView itemCore;
-    private boolean isNothing;
+
     private boolean isPassable = false;
     private boolean isDestroyed = false;
+    private boolean isDestoryable = false;
     private boolean isItem;
     private String type = "";
+    private String typeItem;
+    private boolean isItemReadyToTake = false;
 
-    public MapObj(boolean isItem) {
+    public MapObj() {
         itemCore = new ImageView();
         itemCore.setVisible(false);
-        isNothing = true;
         isPassable = true;
+        isDestoryable = false;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
-        this.isItem = isItem;
     }
 
-    public MapObj(String imgSprite, boolean isItem) {
+    public MapObj(String imgSprite, boolean isPassable, boolean isDestoryable) {
         itemCore = new ImageView(imgSprite);
-        isNothing = false;
-        isPassable = false;
         itemCore.setFitHeight(SaveMap.getHeightEachSprite());
         itemCore.setFitWidth(SaveMap.getWidthEachSprite());
-        this.isItem = isItem;
+        this.isPassable = isPassable;
         this.type = imgSprite;
+        this.isItem = false;
+        this.isDestoryable=isDestoryable;
     }
+
+
+    public MapObj(String imgSprite, String typeItem, boolean isPassable, boolean isDestoryable) {
+        this(imgSprite, isPassable, isDestoryable);
+        this.isItem = true;
+        this.typeItem = typeItem;
+
+    }
+
 
     public ImageView getItemCore() {
         return itemCore;
@@ -51,6 +63,10 @@ public class MapObj extends ObjSprite {
 
     public String getType() {
         return type;
+    }
+
+    public boolean isDestoryable() {
+        return isDestoryable;
     }
 
     public boolean isPassable() {
@@ -71,11 +87,19 @@ public class MapObj extends ObjSprite {
 
         itemCore.setVisible(false);
         isDestroyed = true;
+        isPassable = true;
+        isItem = false;
+        isDestoryable = false;
+        isItemReadyToTake = false;
 
     }
 
-    public boolean isNothing() {
-        return isNothing;
+    public void transformToItem() {
+
+        if (isItem) {
+            itemCore.setImage(new Image(typeItem));
+            isItemReadyToTake = true;
+        }
     }
 
     public boolean isVisible() {
@@ -90,6 +114,10 @@ public class MapObj extends ObjSprite {
         return isItem;
     }
 
+    public boolean isItemReadyToTake() {
+        return isItemReadyToTake;
+    }
+
     public void setVisible(boolean b) {
         itemCore.setVisible(b);
     }
@@ -97,5 +125,9 @@ public class MapObj extends ObjSprite {
     @Override
     public boolean checkMovable() {
         return false;
+    }
+
+    public String getTypeItem() {
+        return typeItem;
     }
 }

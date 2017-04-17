@@ -28,6 +28,7 @@ public class Buff {
     }
 
     public static void addBarrier(PlayerObj playerObj) {
-        playerObj.setHp(playerObj.getHp() + 4);
+        playerObj.setHp(playerObj.getHp() + 1);
+        playerObj.syncLife();
     }
 }

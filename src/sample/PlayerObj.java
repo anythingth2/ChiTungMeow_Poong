@@ -3,11 +3,14 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+
+import java.util.Objects;
 
 
 /**
@@ -18,9 +21,8 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
     private String type = "";
     private ImageView characterCore;
 
-
     private double running_velo = 3;
-    private int amountBomb = 5;
+    private int amountBomb = 1;
     private int distanceBomb = 2;
     private int hp = 3;
     private boolean canKickBomb;
@@ -68,8 +70,8 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         moveRIGHTkey = getMoveRIGHTkey();
         moveDownkey = getMoveDownkey();
         moveLEFTkey = getMoveLEFTkey();
-        characterCore.setFitHeight(SaveMap.getHeightEachSprite());
-        characterCore.setFitWidth(SaveMap.getWidthEachSprite());
+        characterCore.setFitHeight(SaveMap.getHeightEachSprite() );
+        characterCore.setFitWidth(SaveMap.getWidthEachSprite() );
 
         setAnimation(this.type);
 
@@ -203,12 +205,12 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
     }
 
     public void syncLife() {
-        if (getType() == Game.getTypeCharP1())
+        if (Objects.equals(getType(), GameScene.getPlayer1().getType()))
             for (int i = 0; i < 6; i++)
-                Game.life[i].setVisible(i < hp);
+                Game.getGame().getLife()[i].setVisible(i < hp);
         else
             for (int i = 0; i < 6; i++)
-                Game.life2[i].setVisible(i < hp);
+                Game.getGame().getLife2()[i].setVisible(i < hp);
     }
 
     public void deployBomb() {
@@ -258,9 +260,36 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         timeLeft.setOnFinished((ActionEvent event) -> {
             amountBomb++;
             BOOM_SOUNDEFFECT.play();
-            new BoomEffect(pane, bomb).start();
-            for (int j = 0; j < 4 * distanceBomb; j++)
-                new BoomEffect(pane, boom[j]).start();
+            //new BoomEffect(pane, bomb).start();
+            BoomEffect mainBoom = new BoomEffect(pane, bomb);
+
+
+            BoomEffect[] boomEffect = new BoomEffect[4 * distanceBomb];
+            for (int j = 0; j < boomEffect.length; j++)
+                boomEffect[j] = new BoomEffect(pane, boom[j]);
+
+            if (mainBoom.isTakeDamageToPlayer1())
+                GameScene.getPlayer1().wasTakenDamage();
+            else {
+                for (BoomEffect aBoomEffect : boomEffect)
+                    if (aBoomEffect.isTakeDamageToPlayer1()) {
+                        GameScene.getPlayer1().wasTakenDamage();
+                        break;
+                    }
+            }
+
+            if (mainBoom.isTakeDamageToPlayer2())
+                GameScene.getPlayer2().wasTakenDamage();
+            else {
+                for (BoomEffect aBoomEffect : boomEffect)
+                    if (aBoomEffect.isTakeDamageToPlayer2()) {
+                        GameScene.getPlayer2().wasTakenDamage();
+                        break;
+                    }
+            }
+
+            mainBoom.start();
+            for (BoomEffect aBoomEffect : boomEffect) aBoomEffect.start();
 
 
         });
@@ -273,10 +302,11 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
     public void die() {
         characterCore.setVisible(false);
-
         isDead = true;
+        onDie();
     }
 
+public abstract void onDie();
 
     @Override
     public boolean checkMovable() {
@@ -285,7 +315,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
 
     public boolean isOverlapWithMap() {
         boolean isOverlapWithMap = false;
-        double rate = 0.75;
+        double rate = 0.7;
         double px = getX() + SaveMap.getWidthEachSprite() * (1 - rate);
         double py = getY() + SaveMap.getHeightEachSprite() * (1 - rate);
         double pWidth = SaveMap.getWidthEachSprite() * rate;
@@ -296,61 +326,91 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         double mapWidth = SaveMap.getWidthEachSprite() * rate;
         double mapHeight = SaveMap.getHeightEachSprite() * rate;
 
-        for (int i = 0; i < SaveMap.mapObj.length; i++)
-            for (int j = 0; j < SaveMap.mapObj[i].length; j++) {
-                mapx = SaveMap.mapObj[i][j].getItemCore().getX() + SaveMap.getWidthEachSprite() * (1 - rate);
-                mapy = SaveMap.mapObj[i][j].getItemCore().getY() + SaveMap.getHeightEachSprite() * (1 - rate);
+        for (int i = 0; i < SaveMap.mapWall.length; i++)
+            for (int j = 0; j < SaveMap.mapWall[i].length; j++) {
+                if (!SaveMap.mapWall[i][j].isPassable() || SaveMap.mapWall[i][j].isItemReadyToTake()) {
+                    mapx = SaveMap.mapWall[i][j].getItemCore().getX() + SaveMap.getWidthEachSprite() * (1 - rate);
+                    mapy = SaveMap.mapWall[i][j].getItemCore().getY() + SaveMap.getHeightEachSprite() * (1 - rate);
 
-                if (px < mapx + mapWidth
-                        && px + pWidth > mapx
-                        && py < mapy + mapHeight
-                        && py + pHeight > mapy) {
-                    if (!SaveMap.mapObj[i][j].isDestroyed() && !SaveMap.mapObj[i][j].isPassable())
-                        isOverlapWithMap = true;
-                    else if (SaveMap.mapItem[i][j].isItem()
-                            && !SaveMap.mapItem[i][j].isDestroyed()) {
-                        switch (SaveMap.mapItem[i][j].getType()) {
-                            case Buff.INCREASE_BOMB:
-                                Buff.increaseAmountBomb(this);
-                                break;
-                            case Buff.INCREASE_FAST:
-                                Buff.increaseVelo(this);
-                                break;
-                            case Buff.POTION_ITEM:
-                                Buff.increaseDistanceBomb(this);
-                                break;
-                            case Buff.SHIELD_ITEM:
-                                Buff.addBarrier(this);
-                                break;
+                    if (px < mapx + mapWidth
+                            && px + pWidth > mapx
+                            && py < mapy + mapHeight
+                            && py + pHeight > mapy) {
+                        if (!SaveMap.mapWall[i][j].isItemReadyToTake()) {
+                            isOverlapWithMap = true;
+                        } else if (SaveMap.mapWall[i][j].isItem()
+                                && !SaveMap.mapWall[i][j].isDestroyed()) {
+                            switch (SaveMap.mapWall[i][j].getTypeItem()) {
+                                case SourceDir.AMOUNT_BOMB_ITEM:
+                                    Buff.increaseAmountBomb(this);
+                                    break;
+                                case SourceDir.FAST_ITEM:
+                                    Buff.increaseVelo(this);
+                                    break;
+                                case SourceDir.POTION_ITEM:
+                                    Buff.increaseDistanceBomb(this);
+                                    break;
+                                case SourceDir.SHIELD_ITEM:
+                                    Buff.addBarrier(this);
+                                    break;
 
+                            }
+                            SaveMap.mapWall[i][j].destroy();
                         }
-                        SaveMap.mapItem[i][j].destroy();
                     }
+                }
 
+                if (!SaveMap.mapTree[i][j].isPassable() || SaveMap.mapTree[i][j].isItemReadyToTake()) {
+                    mapx = SaveMap.mapTree[i][j].getItemCore().getX() + SaveMap.getWidthEachSprite() * (1 - rate);
+                    mapy = SaveMap.mapTree[i][j].getItemCore().getY() + SaveMap.getHeightEachSprite() * (1 - rate);
+
+                    if (px < mapx + mapWidth
+                            && px + pWidth > mapx
+                            && py < mapy + mapHeight
+                            && py + pHeight > mapy) {
+                        if (!SaveMap.mapTree[i][j].isItemReadyToTake()) {
+                            isOverlapWithMap = true;
+                        } else if (SaveMap.mapTree[i][j].isItem()
+                                && !SaveMap.mapTree[i][j].isDestroyed()) {
+                            switch (SaveMap.mapTree[i][j].getTypeItem()) {
+                                case SourceDir.AMOUNT_BOMB_ITEM:
+                                    Buff.increaseAmountBomb(this);
+                                    break;
+                                case SourceDir.FAST_ITEM:
+                                    Buff.increaseVelo(this);
+                                    break;
+                                case SourceDir.POTION_ITEM:
+                                    Buff.increaseDistanceBomb(this);
+                                    break;
+                                case SourceDir.SHIELD_ITEM:
+                                    Buff.addBarrier(this);
+                                    break;
+
+                            }
+                            SaveMap.mapTree[i][j].destroy();
+                        }
+                    }
                 }
             }
         return isOverlapWithMap;
     }
 
     public boolean isCanDeployBomb() {
-
         return amountBomb > 0;
     }
 
     public boolean isOverlapWithBorder() {
 
         return getX() < 0
-                || getX() + SaveMap.getWidthEachSprite() > Game.getWidth()
+                || getX() + SaveMap.getWidthEachSprite() / 2 > Game.getWidth()
                 || getY() < 0
-                || getY() + SaveMap.getHeightEachSprite() > Game.getHeight();
+                || getY() + SaveMap.getHeightEachSprite() / 2 > Game.getHeight();
     }
 
     public void wasTakenDamage() {
         setHp(getHp() - 1);
-        for (int i = 0; i < 6; i++)
-
-            Game.life[i].setVisible(i < hp);
-
+        System.out.println(getHp());
+        syncLife();
         if (getHp() <= 0)
             die();
     }
