@@ -2,43 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784327a5-8485-4035-88b5-9978563e2445" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/CreditScene.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/GameScene.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/HowToScene.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/IllegalResolutionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/MainMenuScene.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/SelectCharacterScene.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UML/Chi tung Meow poong!!.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/UML/UML1.02.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Down/DogDown_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Down/DogDown_03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Left/DogLeft_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Left/DogLeft_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Right/DogRight_03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Character/Dog/Up/DogUp_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/Kitty/Kitty_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/UML/Chi tung Meow poong!!.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/UML/UML1.02.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/BoomEffect.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/BoomEffect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Buff.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Buff.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$1.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$2.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$3.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/MapObj.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/MapObj.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/PlayerObj.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/PlayerObj.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SaveMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SourceDir.class" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sample/SourceDir.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAutrumRU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAuturmLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallAuturmLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallRU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowLU.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRD.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRD.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRU.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Obj/Wall/Cornor/WallSnowRU.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/Kitty/Kitty_11.png" afterPath="$PROJECT_DIR$/out/production/ChiTungMeow_Poong/sprite/Loading/Kitty/Kitty_11.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/BoomEffect.java" afterPath="$PROJECT_DIR$/src/sample/BoomEffect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Buff.java" afterPath="$PROJECT_DIR$/src/sample/Buff.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Game.java" afterPath="$PROJECT_DIR$/src/sample/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MapObj.java" afterPath="$PROJECT_DIR$/src/sample/MapObj.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/PlayerObj.java" afterPath="$PROJECT_DIR$/src/sample/PlayerObj.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SaveMap.java" afterPath="$PROJECT_DIR$/src/sample/SaveMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SourceDir.java" afterPath="$PROJECT_DIR$/src/sample/SourceDir.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,7 +88,7 @@
       <file leaf-file-name="GameScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/GameScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="20">
               <caret line="146" column="38" lean-forward="false" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -113,64 +99,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="class#925:1405" expanded="false" />
+                <element signature="class#1427:1572" expanded="false" />
+                <element signature="class#1595:1741" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BoomEffect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/BoomEffect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="560">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#1030#1031#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#953#954#0" expanded="false" />
+                <element signature="e#993#994#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapObj.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MapObj.java">
+      <file leaf-file-name="Buff.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Buff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1563">
-              <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+            <state relative-caret-position="260">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaveMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/SaveMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6460">
-              <caret line="363" column="11" lean-forward="false" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="82" column="61" lean-forward="false" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#878:1358" expanded="false" />
-                <element signature="class#1380:1525" expanded="false" />
-                <element signature="class#1548:1694" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerObj.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#move#0;class#PlayerObj#0" expanded="false" />
+                <element signature="e#423#424#0" expanded="false" />
+                <element signature="e#497#498#0" expanded="false" />
+                <element signature="e#849#850#0" expanded="false" />
+                <element signature="e#899#900#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -180,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/SelectCharacterScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
-              <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="66" />
+              <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,12 +155,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SourceDir.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SourceDir.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/SourceDir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="266">
+              <caret line="27" column="460" lean-forward="false" selection-start-line="27" selection-start-column="460" selection-end-line="27" selection-end-column="460" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerObj.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="474" column="23" lean-forward="true" selection-start-line="474" selection-start-column="23" selection-end-line="474" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#move#0;class#PlayerObj#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,6 +192,7 @@
     <findStrings>
       <find>setX</find>
       <find>0.75</find>
+      <find>Ki</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -256,13 +237,13 @@
         <option value="$PROJECT_DIR$/src/sample/HowToScene.java" />
         <option value="$PROJECT_DIR$/src/sample/MapObj.java" />
         <option value="$PROJECT_DIR$/src/sample/SaveMap.java" />
-        <option value="$PROJECT_DIR$/src/sample/Game.java" />
         <option value="$PROJECT_DIR$/src/sample/Buff.java" />
+        <option value="$PROJECT_DIR$/src/sample/SelectCharacterScene.java" />
+        <option value="$PROJECT_DIR$/src/sample/GameScene.java" />
+        <option value="$PROJECT_DIR$/src/sample/PlayerObj.java" />
         <option value="$PROJECT_DIR$/src/sample/BoomEffect.java" />
         <option value="$PROJECT_DIR$/src/sample/SourceDir.java" />
-        <option value="$PROJECT_DIR$/src/sample/SelectCharacterScene.java" />
-        <option value="$PROJECT_DIR$/src/sample/PlayerObj.java" />
-        <option value="$PROJECT_DIR$/src/sample/GameScene.java" />
+        <option value="$PROJECT_DIR$/src/sample/Game.java" />
       </list>
     </option>
   </component>
@@ -742,7 +723,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492194095223</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Release !">
+      <created>1492403523033</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492403523033</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +756,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3705637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42447916" sideWeight="0.4941003" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43841335" sideWeight="0.4941003" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -794,7 +782,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42447916" sideWeight="0.4941003" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43841335" sideWeight="0.4941003" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12447917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -804,7 +792,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20307355" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20532742" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21197917" sideWeight="0.5058997" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -847,7 +835,8 @@
     <MESSAGE value="ChiChaChai's last breath" />
     <MESSAGE value="add passable object" />
     <MESSAGE value="ChiChaChai still be right" />
-    <option name="LAST_COMMIT_MESSAGE" value="ChiChaChai still be right" />
+    <MESSAGE value="Release !" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release !" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -866,9 +855,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#878:1358" expanded="false" />
-            <element signature="class#1380:1525" expanded="false" />
-            <element signature="class#1548:1694" expanded="false" />
+            <element signature="class#925:1405" expanded="false" />
+            <element signature="class#1427:1572" expanded="false" />
+            <element signature="class#1595:1741" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -897,9 +886,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#878:1358" expanded="false" />
-            <element signature="class#1380:1525" expanded="false" />
-            <element signature="class#1548:1694" expanded="false" />
+            <element signature="class#925:1405" expanded="false" />
+            <element signature="class#1427:1572" expanded="false" />
+            <element signature="class#1595:1741" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -928,9 +917,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#878:1358" expanded="false" />
-            <element signature="class#1380:1525" expanded="false" />
-            <element signature="class#1548:1694" expanded="false" />
+            <element signature="class#925:1405" expanded="false" />
+            <element signature="class#1427:1572" expanded="false" />
+            <element signature="class#1595:1741" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -959,9 +948,9 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#878:1358" expanded="false" />
-            <element signature="class#1380:1525" expanded="false" />
-            <element signature="class#1548:1694" expanded="false" />
+            <element signature="class#925:1405" expanded="false" />
+            <element signature="class#1427:1572" expanded="false" />
+            <element signature="class#1595:1741" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,7 +1155,7 @@
         <state relative-caret-position="340">
           <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1176,26 +1165,7 @@
         <state relative-caret-position="420">
           <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Buff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/BoomEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1208,53 +1178,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="82" column="61" lean-forward="false" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#878:1358" expanded="false" />
-            <element signature="class#1380:1525" expanded="false" />
-            <element signature="class#1548:1694" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MapObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1563">
           <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Buff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="260">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#move#0;class#PlayerObj#0" expanded="false" />
+            <element signature="e#423#424#0" expanded="false" />
+            <element signature="e#497#498#0" expanded="false" />
+            <element signature="e#849#850#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SelectCharacterScene.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/BoomEffect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="66" />
+        <state relative-caret-position="560">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#993#994#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/GameScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="20">
           <caret line="146" column="38" lean-forward="false" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1264,11 +1225,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PlayerObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="474" column="23" lean-forward="true" selection-start-line="474" selection-start-column="23" selection-end-line="474" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#move#0;class#PlayerObj#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SourceDir.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="266">
+          <caret line="27" column="460" lean-forward="false" selection-start-line="27" selection-start-column="460" selection-end-line="27" selection-end-column="460" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SelectCharacterScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#925:1405" expanded="false" />
+            <element signature="class#1427:1572" expanded="false" />
+            <element signature="class#1595:1741" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

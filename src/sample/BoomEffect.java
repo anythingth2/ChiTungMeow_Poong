@@ -84,7 +84,6 @@ public class BoomEffect {
                             && py < mapy + mapHeight
                             && py + pHeight > mapy
                             ) {
-                        System.out.println("BOOM TOUCH YOUR");
                         if (SaveMap.mapWall[i][j].isItem()) {
                             SaveMap.mapWall[i][j].transformToItem();
                         } else {

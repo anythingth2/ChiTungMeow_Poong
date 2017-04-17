@@ -70,8 +70,8 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         moveRIGHTkey = getMoveRIGHTkey();
         moveDownkey = getMoveDownkey();
         moveLEFTkey = getMoveLEFTkey();
-        characterCore.setFitHeight(SaveMap.getHeightEachSprite() );
-        characterCore.setFitWidth(SaveMap.getWidthEachSprite() );
+        characterCore.setFitHeight(SaveMap.getHeightEachSprite());
+        characterCore.setFitWidth(SaveMap.getWidthEachSprite());
 
         setAnimation(this.type);
 
@@ -306,7 +306,7 @@ abstract public class PlayerObj extends ObjSprite implements Direction, Sound {
         onDie();
     }
 
-public abstract void onDie();
+    public abstract void onDie();
 
     @Override
     public boolean checkMovable() {

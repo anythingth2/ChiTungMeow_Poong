@@ -4,6 +4,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -14,8 +15,8 @@ import javafx.util.Duration;
 
 public class Game extends Application implements Sound {
 
-    private static final double width = 1440;
-    private static final double height = 1080;
+    private static final double width = 1280;
+    private static final double height = 960;
 
     private static Stage theStage;
 
@@ -25,7 +26,7 @@ public class Game extends Application implements Sound {
     private static HowToScene howto;
     private static CreditScene credit;
 
-
+static int i=0;
     @Override
     public void start(Stage primaryStage) throws Exception {
         theStage = primaryStage;
@@ -71,16 +72,34 @@ BACKGROUND_MUSIC.setCycleCount(AudioClip.INDEFINITE);
 
 
     public static void changeScene(Scene scene) {
+        ImageView characterCore=new ImageView();
         Pane pane = new Pane();
         Scene loadingScene = new Scene(pane, width, height);
+
+        Timeline Kitty = new Timeline();
+        Kitty.setCycleCount(Timeline.INDEFINITE);
+        Kitty.getKeyFrames().add(new KeyFrame(Duration.millis(100), event -> {
+            System.out.println(i);
+            if (i < 11) {
+                characterCore.setImage(new Image(SourceDir.Kitty[i]));
+                i++;
+            } else {
+                characterCore.setImage(new Image(SourceDir.Kitty[0]));
+                i = 1;
+
+            }
+        }));
+
+
         ImageView loading = new ImageView(SourceDir.LOADING_BG);
         loading.setFitWidth(width);
         loading.setFitHeight(height);
         pane.getChildren().addAll(loading);
+        pane.getChildren().add(characterCore);
         theStage.setScene(loadingScene);
         theStage.show();
-
-        Timeline waitloading = new Timeline(new KeyFrame(Duration.millis(0)));
+        Kitty.play();
+        Timeline waitloading = new Timeline(new KeyFrame(Duration.millis(3000)));
         waitloading.setOnFinished(event -> {
             theStage.setScene(scene);
             theStage.show();
